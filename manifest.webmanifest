@@ -1,0 +1,15 @@
+{
+  "name": "Stampbook Budget Planner",
+  "short_name": "Budget",
+  "description": "ADHD-friendly budget planner: know what is safe to spend until payday, tick off bills, pay down debt and save.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F4F7F2",
+  "theme_color": "#F4F7F2",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
