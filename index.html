@@ -2745,7 +2745,7 @@ function viewCats(){
     return `<div class="card"><div class="card-head"><span class="label">${title}</span><button class="btn small" data-act="cat-new" data-type="${type}">+ Category</button></div><div class="list">${own}${built}</div></div>`;
   };
   return `<div><button class="back" data-go="more">← More</button></div><div class="top"><div><h1>Categories</h1><div class="sub">Add your own, rename the ones you have, or hide what you never use</div></div></div>`+
-    sec('out','Everyday spending')+sec('in','Income')+sec('trip','Trip spending');
+    sec('out','Everyday spending')+sec('in','Income')+(BUDGET?'':sec('trip','Trip spending'));
 }
 function catForm(type,key){
   const uc=(S.ucats||[]).find(c=>c.id===key), base=!uc&&key, B=refreshCats.base;
@@ -2992,7 +2992,7 @@ function viewSettings(){
       <div class="form" style="margin-top:12px">
         <p class="muted" style="font-size:14px">If a download does not start, copy the backup as text and paste it into a note.</p>
         <div class="row-end" style="justify-content:flex-start"><button class="btn ghost small" data-act="copy-json">Copy backup text</button><button class="btn ghost small" data-act="dl-csv">Spending for spreadsheets (CSV)</button></div>
-        <div class="field"><label for="imp-text">Paste backup text</label><textarea id="imp-text" placeholder='{"v":1,"trips":[...]}'></textarea></div>
+        <div class="field"><label for="imp-text">Paste backup text</label><textarea id="imp-text" placeholder='{"v":1, ...}'></textarea></div>
         <div class="row-end" style="justify-content:flex-start"><button class="btn ghost small" data-act="import-text">Restore pasted backup</button></div>
       </div>
     </details>
@@ -4920,6 +4920,12 @@ function viewMoreP(){
 }
 
 /* ---------- forms ---------- */
+// the round + button: pick what to add, a task first because that is what people add most
+function pAddSheet(){
+  const it=[['ptask-new','Task','Something to do, it goes on the board','kanban'],['pproj-new','Project','A job with a client, dates and a fee','clipboard'],['pinv-new','Invoice','Money a client owes you','wallet'],['prec-new','Repeating task','Made for you every week or month','repeat'],['pclient-new','Client','Someone you work for','people']];
+  openDlg(`<div class="dlg-head"><h2>Add</h2><button class="iconbtn" data-act="close" aria-label="Close">×</button></div><div class="morelist">${it.map(([a,n,d,i])=>`<button class="morecard" data-act="${a}"><span class="mi" aria-hidden="true">${icon(i)}</span><span class="grow"><b>${n}</b><span>${d}</span></span><span class="muted" aria-hidden="true">›</span></button>`).join('')}</div>`);
+  const f=dlgBody.querySelector('.morecard'); if(f) f.focus();
+}
 const pOpts=(list,sel,none)=>(none?`<option value="">${none}</option>`:'')+list.map(([k,n])=>`<option value="${esc(k)}" ${k===sel?'selected':''}>${esc(n)}</option>`).join('');
 function pTaskForm(t,o){
   const isNew=!t; o=o||{}; t=t||{title:'',project:o.proj||V.pFilter&&V.pFilter!=='none'&&V.pFilter||'',col:o.col||'todo',due:o.date||'',prio:'',notes:'',log:[]};
@@ -5010,6 +5016,7 @@ function pMove(t,col){
 function projAct(act,b,id){
   const T=todayISO(), before=snapshot(), tk=()=>S.tasks.find(x=>x.id===id);
   switch(act){
+    case 'add': pAddSheet(); return true;
     case 'start-own': if(syncOn()) syncStop(true); pSetupForm(0); return true;
     case 'psetup-back': pSetupForm(0,V.setupP); return true;
     case 'load-sample': {if(syncOn()) syncStop(true); S=makeSampleP(); V.tab='today'; commit('Example projects loaded',before); return true}
@@ -5116,6 +5123,7 @@ function projSubmit(kind,f,fd,val,fail){
 function projBoot(){
   if(pRecGen()) save();
   const b=document.querySelector('.brand b'); if(b) b.textContent=PRODUCT.brand||PRODUCT.name;
+  const fab=document.querySelector('.fab'); if(fab) fab.setAttribute('aria-label','Add a task, project, invoice or client');
   setInterval(()=>{const el=document.querySelector('[data-timer]'); if(el) el.textContent=pHrs(pTimerMins())},30000);
 }
 if(PROJ){
