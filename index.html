@@ -807,6 +807,88 @@ button.li:hover{background:none}
 .bdots i.in,.legend i.in{background:var(--good)}.bdots i.bill,.legend i.bill{background:var(--warn)}.bdots i.paid,.legend i.paid{background:var(--muted)}
 @media (max-width:720px){.bd{min-height:52px;padding:5px}.bd .bt,.bd .bsp{display:none}.bdots{display:flex}.bcal{padding:8px;gap:4px}}
 .mnote textarea,#mnote{min-height:80px}
+/* ---------- Projects ---------- */
+:root[data-palette="post"]{--coral:#2F5F8A;--coral-soft:#E2ECF5;--hero1:#2F5F8A;--hero2:#6C94B8}
+@media (prefers-color-scheme:dark){:root[data-palette="post"]:not([data-theme="light"]){--coral:#8FB6D9;--coral-soft:#1C2B3A;--hero1:#244A6B;--hero2:#3D6688}}
+:root[data-theme="dark"][data-palette="post"]{--coral:#8FB6D9;--coral-soft:#1C2B3A;--hero1:#244A6B;--hero2:#3D6688}
+.ptitle{font-family:var(--display);font-weight:800;font-size:26px;line-height:1.2;margin:6px 0 4px}
+.card.hero .muted{color:rgba(255,255,255,.85)}
+.card.hero .lateword{color:#fff;background:rgba(0,0,0,.22);border-radius:6px;padding:0 6px}
+.card.hero .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.pdot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:0}
+.pdot.big{width:16px;height:16px;margin-right:10px}
+.kb{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:start}
+@media (max-width:820px){.kb{grid-template-columns:repeat(4,82%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;margin:0 -4px}.kcol{scroll-snap-align:start}}
+.kcol{background:color-mix(in srgb,var(--line) 55%,transparent);border-radius:16px;padding:10px;min-height:120px;transition:outline-color .15s;outline:2px dashed transparent;outline-offset:-2px}
+.kcol.dropok,.mq.dropok{outline-color:var(--coral)}
+.kcol h4{display:flex;justify-content:space-between;font-size:14px;font-weight:800;padding:4px 6px 10px}
+.kcol h4 span{color:var(--muted)}
+.ptask{display:flex;align-items:stretch;background:var(--paper);border-radius:12px;margin-bottom:8px;box-shadow:var(--shadow);border-left:4px solid var(--c);cursor:grab}
+.ptask.dragging{opacity:.4}
+.ptt{flex:1;min-width:0;text-align:left;background:none;border:0;padding:10px 10px 10px 12px;font:inherit;color:var(--ink);cursor:pointer;display:grid;gap:3px}
+.ptt b{font-size:14.5px;font-weight:700;line-height:1.3;overflow-wrap:anywhere}
+.ptt span{font-size:12.5px;color:var(--muted)}
+.ptags{display:flex;gap:6px;flex-wrap:wrap}
+.ptags em{font-style:normal;font-size:11.5px;font-weight:800;border-radius:6px;padding:1px 7px;background:var(--bg);color:var(--muted)}
+.q-do{--q:var(--bad)}.q-plan{--q:var(--coral)}.q-hand{--q:var(--warn)}.q-drop{--q:var(--muted)}
+.ptags em[class^="q-"]{background:color-mix(in srgb,var(--q) 14%,transparent);color:var(--q)}
+.pmv{display:flex;flex-direction:column;justify-content:center;padding-right:4px}
+.pmv button{border:0;background:none;color:var(--muted);font-size:18px;line-height:1;padding:4px 6px;cursor:pointer;border-radius:6px}
+.pmv button:hover{background:var(--bg);color:var(--ink)}
+.kadd{width:100%;border:1.5px dashed var(--line);background:none;border-radius:10px;padding:8px;font:inherit;font-weight:700;font-size:13.5px;color:var(--muted);cursor:pointer}
+.pfilter{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.pfilter button{flex:none;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:7px 14px;font:inherit;font-weight:700;font-size:13.5px;color:var(--ink);cursor:pointer;white-space:nowrap}
+.pfilter button[aria-pressed="true"]{background:var(--coral);border-color:var(--coral);color:var(--paper)}
+.pfilter button[aria-pressed="true"] .pdot{outline:2px solid var(--paper)}
+.dtiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.dtiles .tile{background:var(--paper);border:1px solid var(--line)}
+.dtiles .tile b{display:block;font-size:24px}.dtiles .tile span{font-size:12.5px;color:var(--muted)}
+@media (max-width:620px){.dtiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4,16px)}
+@media (max-width:820px){.dgrid{grid-template-columns:1fr}}
+.ptable{display:grid}
+.prow{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1.6fr) minmax(0,1fr) auto minmax(0,1fr);gap:14px;align-items:center;padding:12px 4px;border:0;border-top:1px solid var(--line);background:none;font:inherit;color:var(--ink);text-align:left;cursor:pointer}
+.prow:first-child{border-top:0}
+.prow .pn{display:grid;grid-template-columns:auto 1fr;align-items:center}.prow .pn small{grid-column:2;color:var(--muted);font-size:12.5px}
+.prow .pp{display:grid;gap:4px}.prow .pp small{color:var(--muted);font-size:12px}
+.prow .pd{font-size:13.5px}.prow .po{text-align:right;font-weight:700;color:var(--coral)}
+@media (max-width:720px){.prow{grid-template-columns:1fr auto;row-gap:6px}.prow .pp{grid-column:1/-1}.prow .pd{grid-column:1}.prow .po{grid-column:2}}
+.pcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.pcard{display:grid;gap:8px;text-align:left;font:inherit;color:var(--ink);cursor:pointer}
+.tlwrap{--tln:220px;position:relative;overflow:hidden;padding-top:8px}
+@media (max-width:620px){.tlwrap{--tln:120px}}
+.tlrow{display:grid;grid-template-columns:var(--tln) 1fr;align-items:center;min-height:46px;border-top:1px dashed var(--line)}
+.tlrow.tlhead{border:0;min-height:30px}
+.tln{display:flex;align-items:center;min-width:0;background:none;border:0;padding:0 10px 0 0;font:inherit;font-weight:700;font-size:14px;color:var(--ink);text-align:left;cursor:pointer;overflow:hidden;white-space:nowrap}
+.tln .pdot{flex:none}
+.tlt{position:relative;height:30px}
+.tlmonths span{position:absolute;top:4px;font-size:12px;font-weight:800;color:var(--muted);border-left:1px solid var(--line);padding-left:6px;height:24px}
+.tltoday{position:absolute;top:4px;font-size:11px;color:var(--coral);transform:translateX(-50%)}
+@media (max-width:620px){.tltoday{display:none}.tlmonths span{font-size:10.5px;padding-left:3px}.tln{font-size:12.5px}}
+.tlnow{position:absolute;top:-8px;bottom:-8px;width:2px;margin-left:-1px;background:var(--coral);opacity:.55;z-index:2}
+.tlbar{position:absolute;top:5px;height:20px;border-radius:10px;overflow:hidden;opacity:.35}
+.tlbar i{position:absolute;inset:0 auto 0 0;background:inherit;filter:brightness(.75)}
+.tlbar{opacity:1;background-blend-mode:multiply}
+.tlbar:before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.55)}
+.tlbar i{z-index:1;background:inherit;filter:none}
+.tlbar span{position:absolute;right:8px;top:1px;font-size:11.5px;font-weight:800;color:var(--ink);z-index:2}
+.tlbar.done{opacity:.45}
+.tldot{position:absolute;top:8px;width:14px;height:14px;margin-left:-7px;border-radius:4px;transform:rotate(45deg);background:var(--paper);border:3px solid;padding:0;cursor:pointer;z-index:3}
+.legend i.ring{width:10px;height:10px;border:2px solid var(--muted);border-radius:2px;transform:rotate(45deg);display:inline-block}
+.mx{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mq{border-radius:18px;padding:12px;min-height:220px;background:color-mix(in srgb,var(--q) 10%,var(--paper));outline:2px dashed transparent;outline-offset:-2px}
+.mq h4{font-size:16px;font-weight:800;color:var(--q);margin-bottom:8px}.mq h4 small{display:block;font-size:12px;font-weight:600;color:var(--muted)}
+.mt{background:var(--paper);border-radius:10px;margin-bottom:8px;box-shadow:var(--shadow);cursor:grab}
+.mt button{display:grid;gap:2px;width:100%;text-align:left;background:none;border:0;padding:9px 11px;font:inherit;color:var(--ink);cursor:pointer}
+.mt b{font-size:14px;font-weight:700}.mt span{font-size:12px;color:var(--muted)}
+.qbtns{display:flex;gap:4px}
+.qbtns button{border:0;border-radius:8px;padding:6px 9px;font:inherit;font-size:12px;font-weight:800;cursor:pointer;background:color-mix(in srgb,var(--q) 14%,transparent);color:var(--q)}
+@media (max-width:560px){.mx{grid-template-columns:1fr}.qbtns button{padding:6px 7px}}
+.bt.task{background:var(--coral-soft);color:var(--coral)}.bt.pdue{background:var(--bad-soft);color:var(--bad)}
+.bdots i.task,.bdots i.pdue,.legend i.pdue{width:7px;height:7px;border-radius:50%;display:inline-block}
+.bdots i.task{background:var(--coral)}.bdots i.pdue,.legend i.pdue{background:var(--bad)}
+.eyebrow{font-size:13px;font-weight:800;letter-spacing:.12em;color:var(--muted)}
+.wrap.wide,#view.wide{max-width:1240px}
 </style>
 
 <div class="app">
@@ -833,6 +915,7 @@ button.li:hover{background:none}
 // which app this build is: build.js swaps this for the Budget Planner (and its demo)
 const PRODUCT={"id":"budget","name":"Stampbook Budget Planner","brand":"Budget Planner","key":"stampbook-budget.v1","demo":false,"palette":"leaf","shop":"https://www.etsy.com/shop/StampbookApp","icon":"data:image/png;base64,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"};
 const BUDGET=PRODUCT.id==='budget';
+const PROJ=PRODUCT.id==='projects';
 const KEY=PRODUCT.key;
 const DEMO_LIMIT=40;
 const CATS=[['flights','Flights'],['stays','Stays'],['food','Food'],['transport','Transport'],['tickets','Tickets'],['shopping','Shopping'],['other','Other']];
@@ -849,7 +932,7 @@ const KEYWORDS={
   stays:['hotel','hostel','airbnb','villa','ryokan','resort','guesthouse'],
   flights:['flight','airline','baggage','luggage','seat']
 };
-const NAV=BUDGET?[['today','Today'],['month','Month'],['bills','Bills'],['goals','Goals'],['more','More']]:[['today','Today','◉'],['trips','Trips','✈'],['money','Money','◈'],['month','Calendar','▦'],['more','More','☰']];
+const NAV=BUDGET?[['today','Today'],['month','Month'],['bills','Bills'],['goals','Goals'],['more','More']]:PROJ?[['today','Today'],['dash','Dashboard'],['board','Board'],['money','Money'],['more','More']]:[['today','Today','◉'],['trips','Trips','✈'],['money','Money','◈'],['month','Calendar','▦'],['more','More','☰']];
 const HELP={
   setaside:'What to move into savings each month so the trip is paid for before you go: the budget, minus what you have set aside and bookings already paid, split over the months left.',
   safe:"What is left for this trip: the budget, minus bookings and everything spent so far.",
@@ -990,11 +1073,11 @@ function guessHome(){
   try{const loc=new Intl.Locale((navigator.languages&&navigator.languages[0])||navigator.language||'en-US').maximize(), cc=loc.region&&G.countries[loc.region]?loc.region:'', cur=cc&&cCur(cc);
     return {cc,country:cc?cName(cc):'',cur:cur&&CURS.includes(cur)?cur:'USD'}}catch(e){return {cc:'',country:'',cur:'USD'}}
 }
-function blank(){const g=guessHome(); return {v:1,sample:false,settings:{name:'',home:g.cur,theme:'system',homeCode:'',country:g.country,simple:false,palette:PRODUCT.palette,money:true,extras:BUDGET},trips:[],bookings:[],spends:[],places:[],days:[],todos:[],ideas:[],spots:[],tx:[],rec:[],goals:[],mbud:{},ucats:[],catEdits:{},taskDone:{},marks:{},cnotes:{},accounts:[],debts:[],dump:[],mnotes:{}}}
+function blank(){const g=guessHome(); return {v:1,sample:false,settings:{name:'',home:g.cur,theme:'system',homeCode:'',country:g.country,simple:false,palette:PRODUCT.palette,money:true,extras:BUDGET||PROJ},trips:[],bookings:[],spends:[],places:[],days:[],todos:[],ideas:[],spots:[],tx:[],rec:[],goals:[],mbud:{},ucats:[],catEdits:{},taskDone:{},marks:{},cnotes:{},accounts:[],debts:[],dump:[],mnotes:{},projects:[],clients:[],tasks:[],recTasks:[],invoices:[]}}
 function load(){
   try{const raw=localStorage.getItem(KEY); if(raw){const d=JSON.parse(raw); if(d&&Array.isArray(d.trips)&&!d.sample) return normalize(d);}}catch(e){memoryOnly=true}
   // the example data is rebuilt each time, but keep the look and language the person picked
-  const sm=BUDGET?makeSampleB():makeSample();
+  const sm=BUDGET?makeSampleB():PROJ?makeSampleP():makeSample();
   try{const d=JSON.parse(localStorage.getItem(KEY)||'null'); if(d&&d.settings) ['lang','theme','palette'].forEach(k=>{if(d.settings[k]) sm.settings[k]=d.settings[k]})}catch(e){}
   return sm;
 }
@@ -1002,7 +1085,7 @@ function normalize(d){
   const b=blank();
   const out=Object.assign(b,d);
   out.settings=Object.assign(blank().settings,d.settings||{});
-  ['trips','bookings','spends','places','days','todos','ideas','spots','tx','rec','goals','ucats','accounts','debts','dump'].forEach(k=>{if(!Array.isArray(out[k])) out[k]=[]});
+  ['trips','bookings','spends','places','days','todos','ideas','spots','tx','rec','goals','ucats','accounts','debts','dump','projects','clients','tasks','recTasks','invoices'].forEach(k=>{if(!Array.isArray(out[k])) out[k]=[]});
   if(!out.mnotes||typeof out.mnotes!=='object') out.mnotes={};
   if(!out.catEdits||typeof out.catEdits!=='object') out.catEdits={};
   if(!out.mbud||typeof out.mbud!=='object') out.mbud={};
@@ -1225,7 +1308,7 @@ const V={tab:'today',trip:null,showHow:{},spendCat:'food',undo:null,confirm:null
 
 /* ---------- render shell ---------- */
 function renderNav(){
-  const map={trip:'trips',map:'more',year:'more',settings:'more',cats:'more',memories:'more',spending:'more',income:'more',debt:'more',milestones:'more',dump:'more'}, cur=map[V.tab]||V.tab;
+  const map={trip:'trips',map:'more',year:'more',settings:'more',cats:'more',memories:'more',spending:'more',income:'more',debt:'more',milestones:'more',dump:'more',timeline:'more',matrix:'more',pcal:'more',projects:'more',clients:'more',project:'board'}, cur=map[V.tab]||V.tab;
   const items=NAV.filter(n=>n[0]!=='money'||moneyOn());
   const btn=([k,n])=>`<button data-go="${k}" ${cur===k?'aria-current="page"':''}><span class="ic">${icon(NAVICON[k]||'dots')}</span>${n}</button>`;
   const st=document.getElementById('sidetrip'); if(st){const t=nextTrip(); st.innerHTML=t?`<button class="sidetrip" data-open="${t.id}">${icon('plane')}<span class="grow"><b>${esc(t.name)}</b><small>${t.start?fmtRange(t.start,t.end):'No dates yet'}</small></span></button>`:''}
@@ -1234,6 +1317,7 @@ function renderNav(){
 }
 function banner(){
   if(BUDGET) return budgetBanner();
+  if(PROJ) return projBanner();
   if(!S.sample) return '';
   return `<div class="banner"><div><b>You're looking at example trips.</b><p>These belong to Mai, a made-up traveller. Try anything; nothing here is yours yet.</p></div>
   <div class="acts"><button class="btn small" data-act="start-own">Start my own</button>${syncUrl()?'<button class="btn small ghost" data-act="sync-recover">Get my numbers back</button>':''}</div></div>`;
@@ -1244,8 +1328,9 @@ function render(){
   S.trips.forEach(t=>{if(t.statusAuto&&t.status!=='done') t.status=deriveStatus(t)});
   renderNav();
   const v=document.getElementById('view');
-  const views=BUDGET?{today:viewTodayB,month:viewMonthB,bills:viewBills,goals:viewGoalsB,more:viewMoreB,spending:viewSpending,income:viewIncome,debt:viewDebt,milestones:viewMilestones,dump:viewDump,cats:viewCats,settings:viewSettings}:{today:viewToday,month:viewMonth,trips:viewTrips,trip:viewTrip,money:viewMoney,map:viewMap,year:viewYear,settings:viewSettings,more:viewMore,cats:viewCats,memories:viewMemories};
+  const views=PROJ?{today:viewTodayP,dash:viewDash,board:viewBoardP,money:viewMoneyP,more:viewMoreP,project:viewProjectP,projects:viewProjects,clients:viewClients,timeline:viewTimelineP,matrix:viewMatrixP,pcal:viewPCal,cats:viewCats,settings:viewSettings}:BUDGET?{today:viewTodayB,month:viewMonthB,bills:viewBills,goals:viewGoalsB,more:viewMoreB,spending:viewSpending,income:viewIncome,debt:viewDebt,milestones:viewMilestones,dump:viewDump,cats:viewCats,settings:viewSettings}:{today:viewToday,month:viewMonth,trips:viewTrips,trip:viewTrip,money:viewMoney,map:viewMap,year:viewYear,settings:viewSettings,more:viewMore,cats:viewCats,memories:viewMemories};
   v.innerHTML=(views[V.tab]||viewToday)();
+  v.classList.toggle('wide',PROJ&&['dash','board','project','timeline','pcal'].includes(V.tab));
   applyTheme();
   if(v.querySelector('img[data-photo]')) loadPhotos();
   if(V.afterRender){const f=V.afterRender; V.afterRender=null; f()}
@@ -2872,18 +2957,18 @@ function viewSettings(){
     <form class="form" data-form="settings" novalidate><div class="fgrid">
       <div class="field"><label for="st-name">Your name</label><input type="text" id="st-name" name="name" value="${esc(s.name)}" placeholder="Shown on Today"></div>
       <div class="field"><label for="st-home">Home currency</label><select id="st-home" name="home">${CURS.map(c=>`<option ${c===s.home?'selected':''}>${c}</option>`).join('')}</select><span class="hint">Budgets are kept in this currency. Changing it does not convert old amounts.</span></div>
-      ${BUDGET?'':`<div class="field"><label for="st-code">Home airport code</label><input type="text" id="st-code" name="homeCode" maxlength="4" value="${esc(s.homeCode)}" placeholder="BKK"></div>`}
+      ${BUDGET||PROJ?'':`<div class="field"><label for="st-code">Home airport code</label><input type="text" id="st-code" name="homeCode" maxlength="4" value="${esc(s.homeCode)}" placeholder="BKK"></div>`}
       <div class="field"><label for="st-theme">Look</label><select id="st-theme" name="theme">${[['system','Match my device'],['light','Light'],['dark','Dark']].map(([k,n])=>`<option value="${k}" ${k===s.theme?'selected':''}>${n}</option>`).join('')}</select></div>
       <div class="field"><label for="st-lang">Language</label><select id="st-lang">${[['','Match my device'],...LANGS].map(([k,n])=>`<option value="${k}" ${k===(s.lang||'')?'selected':''}>${n}</option>`).join('')}</select></div>
-      <div class="field"><label for="st-country">Home country</label><input type="text" id="st-country" name="country" list="countrylist" value="${esc(s.country)}" placeholder="United States of America" autocomplete="off"><span class="hint" id="st-country-hint">Your currency follows your country.</span>${BUDGET?'':'<span class="hint">Used to remind you about passports for trips abroad.</span>'}</div>
-      <div class="field"><label style="display:flex;gap:8px;align-items:center;color:var(--ink);font-size:14px;margin-top:22px"><input type="checkbox" id="st-extras" name="extras" ${s.extras?'checked':''}> Show extra details</label><span class="hint">${BUDGET?'Debt, milestones and money in on the More page.':'Budgets by kind, day-by-day charts, monthly limits and city pins.'}</span></div>
-      ${BUDGET?'':`<div class="field"><label style="display:flex;gap:8px;align-items:center;color:var(--ink);font-size:14px;margin-top:22px"><input type="checkbox" id="st-money" name="money" ${s.money!==false?'checked':''}> Everyday money</label><span class="hint">Income, spending, regular bills and goals. Turn off to use Stampbook for trips only.</span></div>`}
+      <div class="field"><label for="st-country">Home country</label><input type="text" id="st-country" name="country" list="countrylist" value="${esc(s.country)}" placeholder="United States of America" autocomplete="off"><span class="hint" id="st-country-hint">Your currency follows your country.</span>${BUDGET||PROJ?'':'<span class="hint">Used to remind you about passports for trips abroad.</span>'}</div>
+      <div class="field"><label style="display:flex;gap:8px;align-items:center;color:var(--ink);font-size:14px;margin-top:22px"><input type="checkbox" id="st-extras" name="extras" ${s.extras?'checked':''}> Show extra details</label><span class="hint">${PROJ?'Time logged and priority labels on task cards.':BUDGET?'Debt, milestones and money in on the More page.':'Budgets by kind, day-by-day charts, monthly limits and city pins.'}</span></div>
+      ${BUDGET||PROJ?'':`<div class="field"><label style="display:flex;gap:8px;align-items:center;color:var(--ink);font-size:14px;margin-top:22px"><input type="checkbox" id="st-money" name="money" ${s.money!==false?'checked':''}> Everyday money</label><span class="hint">Income, spending, regular bills and goals. Turn off to use Stampbook for trips only.</span></div>`}
       <fieldset style="grid-column:1/-1"><legend class="label">Colour</legend><div class="swatches">${PALETTES.map(([k,n])=>`<label><input type="radio" name="palette" value="${k}" ${k===(s.palette||'coral')?'checked':''}><i style="background:${({coral:'#8E3B52',rose:'#C2507E',sage:'#4F8A6B',ocean:'#2F7FA8',plum:'#7A62B8',amber:'#B8741A',leaf:'#3F6B57'})[k]}"></i>${n}</label>`).join('')}</div></fieldset>
     </div><div class="row-end"><button class="btn" type="submit">Save</button></div></form></div>
   ${BUDGET?budgetSettingsCard():''}
   ${syncUrl()?`<div class="card" data-sync-card>${syncCard()}</div>`:''}
   <div class="card bkcard"><span class="label">Backup file</span>
-    <p class="muted" style="font-size:14px">${BUDGET?'A backup is one file with all your balances, bills, goals and settings.':'A backup is one file with all your trips, money and settings.'} Keep it somewhere safe, like Files, iCloud Drive or Google Drive.</p>
+    <p class="muted" style="font-size:14px">${PROJ?'A backup is one file with all your projects, tasks, clients, invoices and settings.':BUDGET?'A backup is one file with all your balances, bills, goals and settings.':'A backup is one file with all your trips, money and settings.'} Keep it somewhere safe, like Files, iCloud Drive or Google Drive.</p>
     ${needsInstall()?`<div class="note warn"><b>This copy is open in Safari.</b><p>Safari deletes a website’s saved data after about a week of not opening it. Adding ${PRODUCT.name} to your ${isIOS?'Home Screen':'Dock'} stops that.</p><button class="btn small ghost" data-act="care-install">Show me how</button></div>`:''}
     <p class="bkstatus">${(c=>c.lastBackup?'✓ Last backup downloaded '+fmtShort(isoOf(new Date(c.lastBackup)))+'.':'You have not downloaded a backup yet.')(lsGet(CARE,{}))}</p>
     <div class="bksteps">
@@ -2906,7 +2991,7 @@ function viewSettings(){
   <div class="card"><span class="label">Start over</span>
     <div class="row-end" style="justify-content:flex-start">
       <button class="btn ghost" data-act="start-own">Start my own (empty)</button>
-      <button class="btn ghost" data-act="load-sample">${BUDGET?'Load example budget':'Load example trips'}</button>
+      <button class="btn ghost" data-act="load-sample">${PROJ?'Load example projects':BUDGET?'Load example budget':'Load example trips'}</button>
       <button class="btn ${V.confirm==='wipe'?'danger':'ghost'}" data-act="wipe">${V.confirm==='wipe'?'Tap again to erase everything':'Erase everything'}</button>
     </div></div>
   <p class="muted" style="font-size:12px">${PRODUCT.name}${PRODUCT.demo?' demo':''} v1.0</p>`;
@@ -3030,7 +3115,7 @@ function importData(text){
     const photos=d.photos; delete d.photos;
     if(syncOn()) syncStop(true);
     if(photos) Object.entries(photos).forEach(([id,url])=>{fetch(url).then(r=>r.blob()).then(bl=>PH.put(id,bl)).catch(()=>{})});
-    const before=snapshot(); S=normalize(d); S.sample=false; commit(BUDGET?'Backup restored':`Restored ${S.trips.length} trips${photos?' and their photos':''}`,before);
+    const before=snapshot(); S=normalize(d); S.sample=false; commit(BUDGET||PROJ?'Backup restored':`Restored ${S.trips.length} trips${photos?' and their photos':''}`,before);
   }catch(e){ if(err){err.textContent=e.message.startsWith('This file')?e.message:'Could not read that backup. Check that you copied all of it, from { to }.'; err.hidden=false} }
 }
 
@@ -3060,6 +3145,7 @@ document.addEventListener('click',e=>{
   if((act.startsWith('sync-')||act.startsWith('care-'))&&syncAct(act,b)) return;
   if(!['wipe','debt-del','acc-del','del-trip','del-booking','del-place','del-spot','del-tx','del-goal','del-rec','cat-del','del-spend-x'].includes(act)) V.confirm=null;
   if(BUDGET&&budgetAct(act,b,id)) return;
+  if(PROJ&&projAct(act,b,id)) return;
   switch(act){
     case 'close': closeDlg(); break;
     case 'new-trip': tripForm(null); break;
@@ -3241,6 +3327,7 @@ document.addEventListener('submit',e=>{
   const err=f.querySelector('[data-err]'); const fail=m=>{if(err){err.textContent=m;err.hidden=false}};
   const kind=f.dataset.form;
   if(BUDGET&&budgetSubmit(kind,f,fd,val,fail)) return;
+  if(PROJ&&projSubmit(kind,f,fd,val,fail)) return;
   if(kind==='sync-join'){joinSubmit(val('code')).then(m=>{if(m) fail(m)}); return}
   if(kind==='sync-recover'){const k=cleanSecret(val('key')); if(!k) return fail('That key is not complete. It has 20 letters and numbers, like ABCDE-FGHJK-MNPQR-STVWX.'); recoverWith(k); return}
   if(kind==='trip'){
@@ -3495,7 +3582,7 @@ document.addEventListener('submit',e=>{
     closeDlg(); commit(`${name} pinned`,before);
   }
   if(kind==='settings'){
-    Object.assign(S.settings,{name:val('name'),home:val('home'),homeCode:val('homeCode').toUpperCase(),theme:val('theme'),country:val('country'),extras:fd.get('extras')==='on',palette:val('palette')||'coral',money:BUDGET||fd.get('money')==='on'});
+    Object.assign(S.settings,{name:val('name'),home:val('home'),homeCode:val('homeCode').toUpperCase(),theme:val('theme'),country:val('country'),extras:fd.get('extras')==='on',palette:val('palette')||'coral',money:BUDGET||PROJ||fd.get('money')==='on'});
     Object.keys(fmtCache).forEach(k=>delete fmtCache[k]); commit('Settings saved');
   }
   if(kind==='setup'){
@@ -3521,7 +3608,7 @@ function applyTheme(){
 const SYNC_URL_DEFAULT='https://stampbook-sync.tharit-c1999.workers.dev';   // the deployed Cloudflare worker
 // the server only answers the app's own site, so the claude.ai preview (a frame) shows no sync buttons
 const syncUrl=()=>{if(PRODUCT.demo||window.self!==window.top) return ''; try{return localStorage.getItem('stampbook.syncurl')||SYNC_URL_DEFAULT}catch(e){return SYNC_URL_DEFAULT}};
-const SKP=BUDGET?'stampbook-budget':'stampbook', SK=SKP+'.sync', SKB=SKP+'.sync.base', SKC=SKP+'.sync.conflicts', CARE=SKP+'.care';
+const SKP=BUDGET?'stampbook-budget':PROJ?'stampbook-projects':'stampbook', SK=SKP+'.sync', SKB=SKP+'.sync.base', SKC=SKP+'.sync.conflicts', CARE=SKP+'.care';
 const lsGet=(k,d)=>{try{const v=localStorage.getItem(k); return v?JSON.parse(v):d}catch(e){return d}};
 const lsSet=(k,v)=>{try{v==null?localStorage.removeItem(k):localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
 let SY=lsGet(SK,null), VK=null, SYNC_QUIET=false, syncBusy=null, syncAgain=false, pushTimer=null;
@@ -3557,8 +3644,8 @@ async function api(method,path,body,raw){
 }
 
 /* three-way merge, one record at a time: nothing is erased when both devices changed something */
-const SYNC_LISTS=['trips','bookings','spends','places','days','todos','ideas','spots','tx','rec','goals','ucats'];
-const SYNC_MAPS=['settings','mbud','catEdits','taskDone','marks','cnotes'];
+const SYNC_LISTS=['trips','bookings','spends','places','days','todos','ideas','spots','tx','rec','goals','ucats','accounts','debts','dump','projects','clients','tasks','recTasks','invoices'];
+const SYNC_MAPS=['settings','mbud','catEdits','taskDone','marks','cnotes','mnotes'];
 const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 const comparable=s=>JSON.stringify(s,(k,v)=>k==='lang'||k==='sample'?undefined:v);
 function merge3(base,local,remote){
@@ -3698,7 +3785,7 @@ async function pairAllow(){
   }catch(e){dlgFail(e,'Connect another device')}
 }
 async function pairDeny(){try{if(PAIR) await api('POST','/pair/'+PAIR.code+'/deny')}catch(e){} PAIR=null; closeDlg(); toast('The other device was not allowed')}
-const hasOwnData=()=>!S.sample&&(S.trips.length+S.tx.length+S.goals.length)>0;
+const hasOwnData=()=>!S.sample&&(S.trips.length+S.tx.length+S.goals.length+S.projects.length+S.tasks.length)>0;
 const replaceWarn=what=>hasOwnData()?`<div class="note warn"><p>This device already has a planner. ${what} will replace it. Download a backup first if you want to keep this copy.</p><button class="btn small ghost" data-act="dl-json">Download a backup</button></div>`:'';
 function joinStart(){
   if(!needSyncReady()) return;
@@ -3738,7 +3825,7 @@ async function joinVault(secret){
 
 /* recovery copy: a 20-character key, or a passkey in the person's Apple or Google account */
 // each app has its own salt, so a Stampbook passkey can never open a Budget Planner copy (both live on the same site)
-const PRF_SALT=te.encode(BUDGET?'stampbook-budget-passkey-prf-salt-v1':'stampbook-passkey-prf-salt-v1...').slice(0,32);
+const PRF_SALT=te.encode(BUDGET?'stampbook-budget-passkey-prf-salt-v1':PROJ?'stampbook-projects-passkey-prf-salt-v1':'stampbook-passkey-prf-salt-v1...').slice(0,32);
 const passkeyPossible=()=>!inFrame&&!!window.PublicKeyCredential&&window.isSecureContext;
 async function recoveryStart(){
   if(!needSyncReady()) return;
@@ -4547,6 +4634,541 @@ function budgetSubmit(kind,f,fd,val,fail){
   return false;
 }
 
+/* ---------- Stampbook Projects: projects, tasks and client money for freelancers ---------- */
+// Only used when PRODUCT.id==='projects'. Tasks move through four columns; invoices track what clients owe.
+const PCOLS=[['todo','To do'],['doing','Doing'],['waiting','Waiting on client'],['done','Done']];
+const PCOLNAME=Object.fromEntries(PCOLS);
+const QUADS=[['do','Do now'],['plan','Plan it'],['hand','Hand off'],['drop','Let go']];
+const QUADNAME=Object.fromEntries(QUADS);
+const PROJCOL=['#2F5F8A','#A8435E','#3E6B55','#B7862E','#7A62B8','#2F9BA8','#C0605A','#5E6B78'];
+const PREPEAT=[['week','Every week'],['2weeks','Every 2 weeks'],['month','Every month']];
+const PSTATUS=[['active','Active'],['paused','Paused'],['done','Done']];
+if(PROJ){
+  Object.assign(ICONS,{
+    kanban:'<rect x="3.5" y="4.5" width="5" height="15" rx="1.6" class="f"/><rect x="9.5" y="4.5" width="5" height="10" rx="1.6"/><rect x="15.5" y="4.5" width="5" height="12.5" rx="1.6" class="f"/>',
+    timeline:'<path d="M4 6.5h9M7 12h11M5 17.5h7"/><circle cx="15.5" cy="6.5" r="1.6" class="d"/><circle cx="20" cy="12" r="1.6" class="d"/><circle cx="14.5" cy="17.5" r="1.6" class="d"/>',
+    matrix:'<rect x="3.5" y="3.5" width="7.5" height="7.5" rx="1.8" class="f"/><rect x="13" y="3.5" width="7.5" height="7.5" rx="1.8"/><rect x="3.5" y="13" width="7.5" height="7.5" rx="1.8"/><rect x="13" y="13" width="7.5" height="7.5" rx="1.8" class="f"/>',
+    clock:'<circle cx="12" cy="12" r="8.5" class="f"/><path d="M12 7.5V12l3 2"/>',
+    flag:'<path class="f" d="M5.5 20.5V4.5h11l-2 4 2 4h-11"/>'
+  });
+  Object.assign(NAVICON,{dash:'chart',board:'kanban',money:'wallet'});
+  Object.assign(MOREICON,{timeline:'timeline',matrix:'matrix',pcal:'calendar',projects:'clipboard',clients:'people'});
+}
+
+/* lookups and numbers */
+const pProj=id=>S.projects.find(p=>p.id===id);
+const pClient=id=>S.clients.find(c=>c.id===id);
+const pTasksOf=pid=>S.tasks.filter(t=>t.project===pid);
+const pOpen=t=>t.col!=='done';
+const pLate=t=>pOpen(t)&&t.due&&t.due<todayISO();
+const pMins=t=>(t.log||[]).reduce((a,l)=>a+(+l.m||0),0);
+const pHrs=m=>m>=60?`${Math.floor(m/60)} h${m%60?` ${m%60} m`:''}`:`${m} m`;
+const pColor=pid=>(pProj(pid)||{}).color||'#9A9099';
+const pName=pid=>(pProj(pid)||{}).name||'No project';
+function pStats(p){
+  const ts=pTasksOf(p.id), done=ts.filter(t=>t.col==='done').length, inv=S.invoices.filter(i=>i.project===p.id);
+  const billed=inv.reduce((a,i)=>a+(+i.amount||0),0), paid=inv.filter(i=>i.paid).reduce((a,i)=>a+(+i.amount||0),0);
+  return {total:ts.length,done,pct:ts.length?Math.round(done/ts.length*100):0,late:ts.filter(pLate).length,waiting:ts.filter(t=>t.col==='waiting').length,billed,paid,owed:billed-paid,fee:+p.fee||0,mins:ts.reduce((a,t)=>a+pMins(t),0)};
+}
+function pHealth(p,st){
+  st=st||pStats(p); const T=todayISO();
+  if(p.status==='done') return ['Done','s-done'];
+  if(p.status==='paused') return ['Paused','s-idea'];
+  if(p.due&&p.due<T) return ['Late','s-ended'];
+  if(p.due&&diffDays(T,p.due)<=7&&st.pct<70) return ['At risk','s-plan'];
+  return ['On track','s-going'];
+}
+const pOwedList=()=>S.invoices.filter(i=>!i.paid).sort((a,b)=>(a.due||'9').localeCompare(b.due||'9'));
+const pActive=()=>S.projects.filter(p=>p.status!=='done');
+function pDueText(d){const T=todayISO(); if(!d) return ''; const n=diffDays(T,d); return n<0?`<b class="lateword">${-n} day${n===-1?'':'s'} late</b>`:n===0?'<b>due today</b>':n===1?'due tomorrow':'due '+fmtShort(d)}
+
+/* repeating tasks: each template makes the next task a week ahead */
+function pRecGen(){
+  const T=todayISO(), until=addDays(T,7); let n=0;
+  S.recTasks.forEach(r=>{
+    const from=r.upto?addDays(r.upto,1):r.start; if(!from||from>until) return;
+    occurrences({start:r.start,every:r.every,day:r.day},from,until).forEach(d=>{if(!S.tasks.some(t=>t.rec===r.id&&t.due===d)){S.tasks.push({id:uid(),project:r.project,title:r.title,col:'todo',due:d,rec:r.id,log:[]}); n++}});
+    r.upto=until;
+  });
+  return n;
+}
+
+/* the one thing to do now */
+function pNow(){
+  const T=todayISO(); const run=S.settings.timer&&S.tasks.find(t=>t.id===S.settings.timer.task);
+  if(run) return run;
+  const score=t=>t.due&&t.due<T?0:t.prio==='do'?1:t.due===T?2:t.col==='doing'?3:t.due&&t.due<=addDays(T,3)?4:9;
+  return S.tasks.filter(t=>pOpen(t)&&t.col!=='waiting'&&!isHidden('pnow:'+t.id)&&score(t)<9).sort((a,b)=>score(a)-score(b)||(a.due||'9').localeCompare(b.due||'9'))[0]||null;
+}
+function pSmall(now){
+  const T=todayISO();
+  return S.tasks.filter(t=>t!==now&&pOpen(t)&&t.col!=='waiting'&&((t.due&&t.due<=addDays(T,1))||t.col==='doing'||t.prio==='do')).sort((a,b)=>(a.due||'9').localeCompare(b.due||'9')).slice(0,3);
+}
+const pNudges=()=>S.tasks.filter(t=>t.col==='waiting'&&(t.nudge||addDays(t.waitingSince||todayISO(),3))<=todayISO());
+
+/* timer */
+function pTimerMins(){const tm=S.settings.timer; return tm?Math.max(0,Math.round((Date.now()-tm.start)/60000)):0}
+function pStopTimer(){
+  const tm=S.settings.timer; if(!tm) return 0; const t=S.tasks.find(x=>x.id===tm.task), m=Math.max(1,pTimerMins());
+  if(t){t.log=t.log||[]; t.log.push({d:todayISO(),m})} S.settings.timer=null; return m;
+}
+
+/* ---------- shared bits ---------- */
+function projBanner(){
+  if(!S.sample) return PRODUCT.demo?`<div class="banner demo"><div><b>Demo version</b><p>Everything works. The demo keeps ${DEMO_LIMIT} tasks you add, and the full app adds Home Screen, offline and syncing.</p></div></div>`:'';
+  return `<div class="banner"><div><b>You're looking at example projects.</b><p>These belong to Nina, a made-up designer. Try anything; nothing here is yours yet.</p></div>
+  <div class="acts"><button class="btn small" data-act="start-own">Start my own</button>${syncUrl()?'<button class="btn small ghost" data-act="sync-recover">Get my numbers back</button>':''}</div></div>`;
+}
+const pDemoFull=()=>PRODUCT.demo&&S.tasks.filter(t=>!t.s).length>=DEMO_LIMIT;
+function pDemoDialog(){
+  openDlg(`<div class="dlg-head"><h2>The demo is full</h2><button class="iconbtn" data-act="close" aria-label="Close">×</button></div>
+    <p>The demo keeps ${DEMO_LIMIT} tasks. Everything else keeps working, so look around as much as you like.</p>
+    <p class="muted" style="font-size:14px">The full ${esc(PRODUCT.name)} has no limit, adds to your Home Screen, works offline and syncs between your devices.</p>
+    <div class="row-end"><button class="btn ghost" data-act="close">Not now</button><a class="btn coral" href="${esc(PRODUCT.shop||'https://www.etsy.com/shop/StampbookApp')}" target="_blank" rel="noopener">See the full version</a></div>`);
+}
+function pTaskCard(t,showProj){
+  const T=todayISO(), m=pMins(t), late=pLate(t), i=PCOLS.findIndex(c=>c[0]===t.col);
+  return `<div class="ptask" draggable="true" data-task="${t.id}" style="--c:${pColor(t.project)}">
+    <button class="ptt" data-act="ptask-edit" data-id="${t.id}"><b style="${t.col==='done'?'text-decoration:line-through;color:var(--muted)':''}">${esc(t.title)}</b>
+      <span>${[showProj?`<i class="pdot" style="background:${pColor(t.project)}"></i>${esc(pName(t.project))}`:'',t.col==='waiting'?`waiting since ${fmtShort(t.waitingSince||T)}`:t.col==='done'&&t.doneAt?'done '+fmtShort(t.doneAt):t.due?pDueText(t.due):'',t.rec?'↻':''].filter(Boolean).join(' · ')}</span>
+      ${t.prio||m?`<span class="ptags">${t.prio?`<em class="q-${t.prio}">${QUADNAME[t.prio]}</em>`:''}${m?`<em>${pHrs(m)}</em>`:''}</span>`:''}</button>
+    <span class="pmv">${i>0?`<button data-act="pmove" data-id="${t.id}" data-d="-1" aria-label="Move left">‹</button>`:''}${i<3?`<button data-act="pmove" data-id="${t.id}" data-d="1" aria-label="Move right">›</button>`:''}</span>
+  </div>`;
+}
+function pBoard(pid){
+  const list=S.tasks.filter(t=>!pid||t.project===pid);
+  return `<div class="kb">${PCOLS.map(([k,n])=>{const ts=list.filter(t=>t.col===k).sort(k==='done'?(a,b)=>(b.doneAt||'').localeCompare(a.doneAt||''):(a,b)=>(a.due||'9').localeCompare(b.due||'9')), show=k==='done'&&!V.pShowDone?ts.slice(0,6):ts;
+    return `<div class="kcol" data-col="${k}"><h4>${n}<span>${ts.length}</span></h4>${show.map(t=>pTaskCard(t,!pid)).join('')}
+      ${k==='done'&&ts.length>6?`<button class="linkbtn" data-act="pdone-all">${V.pShowDone?'Show fewer':'Show all '+ts.length}</button>`:''}
+      ${k!=='done'?`<button class="kadd" data-act="ptask-new" data-col="${k}" data-proj="${pid||''}">+ Add task</button>`:''}</div>`}).join('')}</div>`;
+}
+const pTile=(v,l,col)=>`<div class="tile"><b class="num" ${col?`style="color:${col}"`:''}>${v}</b><span>${l}</span></div>`;
+
+/* ---------- views ---------- */
+function viewTodayP(){
+  const T=todayISO(), h=new Date().getHours(), hi=h<12?'Good morning':h<18?'Good afternoon':'Good evening', name=S.settings.name;
+  const now=pNow(), tm=S.settings.timer, running=tm&&now&&tm.task===now.id;
+  let out=projBanner()+careCards()+`<div class="top"><div><h1>${hi}${name?', '+esc(name):''}</h1><div class="sub">${fmtShort(T)} · ${pActive().length} project${pActive().length===1?'':'s'} going</div></div></div>`;
+  out+=now?`<div class="card hero"><span class="label">${running?'Working on it':'Right now · one thing'}</span><div class="ptitle">${esc(now.title)}</div>
+      <div class="muted">${esc(pName(now.project))}${now.due?' · '+pDueText(now.due):''}</div>
+      ${running?`<div class="big num" data-timer>${pHrs(pTimerMins())}</div>`:''}
+      <div class="row-end" style="justify-content:flex-start">${running?`<button class="btn coral" data-act="ptimer-stop">Stop timer</button>`:`<button class="btn coral" data-act="ptimer-start" data-id="${now.id}">Start 25 min</button>`}<button class="btn ghost" data-act="ptask-done" data-id="${now.id}">Done</button>${running?'':`<button class="btn ghost" data-act="pnow-later" data-id="${now.id}">Later</button>`}</div></div>`
+    :`<div class="card hero"><span class="label">Right now</span><div class="ptitle">All clear ✓</div><div class="muted">Nothing is due. Pick something from the board, or enjoy the break.</div></div>`;
+  out+=`<form class="quickbox" data-form="pqa" autocomplete="off"><label class="sr" for="pqa">Add a task</label><input id="pqa" name="q" placeholder="Add a task, like “send invoice tomorrow”" enterkeyhint="go"><button class="btn small" type="submit">Add</button></form>`;
+  const small=pSmall(now);
+  out+=`<div class="card"><div class="card-head"><span class="label">Today · small things</span><button class="linkbtn" data-go="board">Board</button></div>
+    ${small.length?`<div class="list">${small.map(t=>`<div class="li"><button class="chk" data-act="ptask-done" data-id="${t.id}" aria-label="Done: ${esc(t.title)}"></button><button class="grow tdtext" data-act="ptask-edit" data-id="${t.id}"><b>${esc(t.title)}</b><span><i class="pdot" style="background:${pColor(t.project)}"></i>${esc(pName(t.project))}${t.due?' · '+pDueText(t.due):''}</span></button></div>`).join('')}</div>`:'<p class="muted" style="font-size:14px">Nothing else for today.</p>'}</div>`;
+  const nud=pNudges();
+  if(nud.length) out+=`<div class="card"><span class="label">Waiting on clients · time to nudge</span><div class="list">${nud.map(t=>`<div class="li"><button class="grow tdtext" data-act="ptask-edit" data-id="${t.id}"><b>${esc(t.title)}</b><span>${esc(pName(t.project))} · waiting since ${fmtShort(t.waitingSince||T)}</span></button><button class="btn small ghost" data-act="pnudge" data-id="${t.id}">Nudged</button></div>`).join('')}</div></div>`;
+  const owed=pOwedList().filter(i=>!i.due||i.due<=addDays(T,7));
+  out+=`<div class="card"><div class="card-head"><span class="label">Money clients owe you</span><button class="linkbtn" data-go="money">All invoices</button></div>
+    ${owed.length?`<div class="list">${owed.map(pInvRow).join('')}</div>`:'<p class="muted" style="font-size:14px">Nothing due this week.</p>'}</div>`;
+  return out;
+}
+function pInvRow(i){
+  const T=todayISO(), late=!i.paid&&i.due&&i.due<T;
+  return `<div class="li"><button class="grow tdtext" data-act="pinv-edit" data-id="${i.id}"><b>${esc(i.label)}</b><span>${esc((pClient(i.client)||{}).name||pName(i.project))} · ${i.paid?'paid '+fmtShort(i.paidAt||i.due||T):late?`<b class="lateword">overdue ${diffDays(i.due,T)} day${diffDays(i.due,T)===1?'':'s'}</b>`:i.due?'due '+fmtShort(i.due):'no due date'}</span></button>
+    <span class="amt num" style="${late?'color:var(--bad)':''}">${H(+i.amount)}</span>${i.paid?'':`<button class="btn small ghost" data-act="pinv-paid" data-id="${i.id}">Paid</button>`}</div>`;
+}
+function viewDash(){
+  const T=todayISO(), ym=T.slice(0,7), wk=addDays(T,7), y0=T.slice(0,4);
+  const open=S.tasks.filter(pOpen), act=pActive();
+  const owed=pOwedList(), overdue=owed.filter(i=>i.due&&i.due<T);
+  const earnedM=S.invoices.filter(i=>i.paid&&(i.paidAt||'').slice(0,7)===ym).reduce((a,i)=>a+(+i.amount||0),0);
+  const weekStart=addDays(T,-((parse(T).getDay()+6)%7));
+  const minsWeek=S.tasks.reduce((a,t)=>a+(t.log||[]).filter(l=>l.d>=weekStart).reduce((b,l)=>b+(+l.m||0),0),0);
+  let out=projBanner()+`<div class="top"><div><h1>Dashboard</h1><div class="sub">Everything at a glance · ${fmtShort(T)}</div></div><button class="btn coral" data-act="pproj-new">+ Project</button></div>`;
+  out+=`<div class="dtiles">${pTile(act.length,'Active projects')}${pTile(open.filter(t=>t.due&&t.due>=T&&t.due<=wk).length,'Tasks due this week')}${pTile(open.filter(pLate).length,'Overdue tasks',open.some(pLate)?'var(--bad)':'')}${pTile(open.filter(t=>t.col==='waiting').length,'Waiting on clients','var(--warn)')}
+    ${pTile(H(owed.reduce((a,i)=>a+(+i.amount||0),0)),'Owed to you','var(--coral)')}${pTile(H(overdue.reduce((a,i)=>a+(+i.amount||0),0)),'Overdue invoices',overdue.length?'var(--bad)':'')}${pTile(H(earnedM),'Paid this month','var(--good)')}${pTile(pHrs(minsWeek),'Logged this week')}</div>`;
+  out+=`<div class="card"><div class="card-head"><span class="label">Projects</span><button class="linkbtn" data-go="projects">All projects</button></div>
+    <div class="ptable">${act.length?act.map(p=>{const st=pStats(p), hl=pHealth(p,st); return `<button class="prow" data-act="pproj-open" data-id="${p.id}">
+      <span class="pn"><i class="pdot" style="background:${p.color}"></i><b>${esc(p.name)}</b><small>${esc((pClient(p.client)||{}).name||'')}</small></span>
+      <span class="pp"><span class="prog"><i style="width:${st.pct}%;background:${p.color}"></i></span><small>${st.done} of ${st.total} tasks</small></span>
+      <span class="pd">${p.due?pDueText(p.due):'<span class="muted">no due date</span>'}</span>
+      <span><em class="pill ${hl[1]}">${hl[0]}</em></span>
+      <span class="num po">${st.owed?H(st.owed)+' owed':''}</span></button>`}).join(''):'<p class="muted">No active projects. Add one to see it here.</p>'}</div></div>`;
+  out+=`<div class="dgrid"><div class="card"><span class="label">Tasks done per week</span>${pDoneChart()}</div><div class="card"><span class="label">Paid by month</span>${pEarnChart()}</div></div>`;
+  out+=`<div class="dgrid"><div class="card"><span class="label">Coming up · next 14 days</span>${pLoadChart()}</div><div class="card"><span class="label">Time by project · this month</span>${pTimeBars(ym)}</div></div>`;
+  return out;
+}
+function pBars(vals,labels,col,fmtv){
+  const W=520,Hh=200,L=10,B=170,mx=Math.max(1,...vals), bw=(W-L*2)/vals.length;
+  return `<svg viewBox="0 0 ${W} ${Hh}" width="100%" role="img" style="font-family:var(--body)">${vals.map((v,i)=>{const h=v/mx*(B-24), x=L+i*bw+bw*.18; return `${v?`<rect x="${x.toFixed(1)}" y="${(B-h).toFixed(1)}" width="${(bw*.64).toFixed(1)}" height="${h.toFixed(1)}" rx="5" style="fill:${col}"><title>${labels[i]}: ${fmtv?fmtv(v):v}</title></rect><text x="${(x+bw*.32).toFixed(1)}" y="${(B-h-6).toFixed(1)}" text-anchor="middle" font-size="12" font-weight="800" style="fill:var(--ink)">${fmtv?fmtv(v):v}</text>`:''}<text x="${(x+bw*.32).toFixed(1)}" y="${B+20}" text-anchor="middle" font-size="12" style="fill:var(--muted)">${labels[i]}</text>`}).join('')}<line x1="${L}" x2="${W-L}" y1="${B}" y2="${B}" style="stroke:var(--line)"/></svg>`;
+}
+function pDoneChart(){
+  const T=todayISO(), ws=addDays(T,-((parse(T).getDay()+6)%7)), vals=[], labels=[];
+  for(let i=7;i>=0;i--){const s=addDays(ws,-7*i), e=addDays(s,6); vals.push(S.tasks.filter(t=>t.col==='done'&&t.doneAt&&t.doneAt>=s&&t.doneAt<=e).length); labels.push(i?`${+s.slice(8)} ${MON[+s.slice(5,7)-1]}`:'This wk')}
+  return pBars(vals,labels,'var(--coral)');
+}
+function pEarnChart(){
+  const T=parse(todayISO()), vals=[], labels=[];
+  for(let i=5;i>=0;i--){const d=new Date(T.getFullYear(),T.getMonth()-i,1,12), ym=isoOf(d).slice(0,7); vals.push(S.invoices.filter(x=>x.paid&&(x.paidAt||'').slice(0,7)===ym).reduce((a,x)=>a+(+x.amount||0),0)); labels.push(MON[d.getMonth()])}
+  return pBars(vals,labels,'var(--good)',v=>compactMoney(v));
+}
+function pLoadChart(){
+  const T=todayISO(), vals=[], labels=[];
+  for(let i=0;i<14;i++){const d=addDays(T,i); vals.push(S.tasks.filter(t=>pOpen(t)&&t.due===d).length+S.projects.filter(p=>p.status!=='done'&&p.due===d).length); labels.push(i%2?'':String(+d.slice(8)))}
+  return pBars(vals,labels,'var(--sky)')+`<p class="muted" style="font-size:13px">Tasks and project deadlines due each day.</p>`;
+}
+function pTimeBars(ym){
+  const by={}; S.tasks.forEach(t=>(t.log||[]).forEach(l=>{if(l.d.slice(0,7)===ym) by[t.project||'']=(by[t.project||'']||0)+(+l.m||0)}));
+  const rows=Object.entries(by).sort((a,b)=>b[1]-a[1]), mx=Math.max(1,...rows.map(r=>r[1]));
+  return rows.length?`<div class="catrows">${rows.map(([pid,m])=>`<div class="catrow"><span class="dotc" style="background:${pColor(pid)}"></span><span class="cn">${esc(pName(pid))}</span><div class="cbar"><i style="width:${m/mx*100}%;background:${pColor(pid)}"></i></div><b class="num">${pHrs(m)}</b></div>`).join('')}</div>`
+    :'<p class="muted" style="font-size:14px">Start the timer on a task to see where your time goes.</p>';
+}
+function viewBoardP(){
+  const f=V.pFilter||'', act=pActive();
+  return projBanner()+`<div class="top"><div><h1>Board</h1><div class="sub">Drag cards between columns, or use ‹ ›</div></div><button class="btn coral" data-act="ptask-new" data-col="todo" data-proj="${f}">+ Task</button></div>
+    <div class="chips pfilter"><button data-act="pfilter" data-k="" aria-pressed="${!f}">All projects</button>${act.map(p=>`<button data-act="pfilter" data-k="${p.id}" aria-pressed="${f===p.id}"><i class="pdot" style="background:${p.color}"></i>${esc(p.name)}</button>`).join('')}<button data-act="pfilter" data-k="none" aria-pressed="${f==='none'}">No project</button></div>
+    ${f==='none'?pBoardList(S.tasks.filter(t=>!t.project)):pBoard(f)}`;
+}
+function pBoardList(list){return `<div class="kb">${PCOLS.map(([k,n])=>`<div class="kcol" data-col="${k}"><h4>${n}<span>${list.filter(t=>t.col===k).length}</span></h4>${list.filter(t=>t.col===k).map(t=>pTaskCard(t,false)).join('')}${k!=='done'?`<button class="kadd" data-act="ptask-new" data-col="${k}" data-proj="">+ Add task</button>`:''}</div>`).join('')}</div>`}
+function viewProjectP(){
+  const p=pProj(V.proj); if(!p){V.tab='projects'; return viewProjects()}
+  const st=pStats(p), hl=pHealth(p,st), c=pClient(p.client), inv=S.invoices.filter(i=>i.project===p.id).sort((a,b)=>(a.due||'').localeCompare(b.due||'')), rec=S.recTasks.filter(r=>r.project===p.id);
+  return `<div><button class="back" data-go="projects">← Projects</button></div>`+projBanner()+`<div class="top"><div><h1><i class="pdot big" style="background:${p.color}"></i>${esc(p.name)}</h1><div class="sub">${c?'Client: '+esc(c.name)+' · ':''}${p.due?pDueText(p.due)+' · ':''}<em class="pill ${hl[1]}">${hl[0]}</em></div></div><button class="btn ghost" data-act="pproj-edit" data-id="${p.id}">Edit project</button></div>
+    <div class="dtiles">${pTile(st.pct+'%','Done ('+st.done+' of '+st.total+')')}${pTile(st.late,'Overdue tasks',st.late?'var(--bad)':'')}${pTile(H(st.fee),'Project fee')}${pTile(H(st.paid),'Paid','var(--good)')}${pTile(H(st.owed),'Owed','var(--coral)')}${pTile(H(Math.max(0,st.fee-st.billed)),'Still to invoice')}${pTile(pHrs(st.mins),'Time logged')}${pTile(st.fee&&st.mins?H(st.fee/(st.mins/60)):'–','Earned per hour')}</div>
+    ${pBoard(p.id)}
+    <div class="dgrid"><div class="card"><div class="card-head"><span class="label">Invoices</span><button class="btn small" data-act="pinv-new" data-proj="${p.id}">+ Invoice</button></div>${inv.length?`<div class="list">${inv.map(pInvRow).join('')}</div>`:'<p class="muted" style="font-size:14px">No invoices yet.</p>'}</div>
+    <div class="card"><div class="card-head"><span class="label">Repeating tasks</span><button class="btn small" data-act="prec-new" data-proj="${p.id}">+ Repeat</button></div>${rec.length?`<div class="list">${rec.map(r=>`<button class="li" data-act="prec-edit" data-id="${r.id}"><span class="grow"><b>${esc(r.title)} ↻</b><span>${(PREPEAT.find(x=>x[0]===r.every)||[])[1]||''}</span></span></button>`).join('')}</div>`:'<p class="muted" style="font-size:14px">For jobs that come back, like a monthly report.</p>'}</div></div>
+    <div class="card"><label class="label" for="pnote">Project notes</label><textarea id="pnote" data-pnote="${p.id}" placeholder="Links, logins hint, what the client said…">${esc(p.notes||'')}</textarea></div>`;
+}
+function viewProjects(){
+  const groups=PSTATUS.map(([k,n])=>[n,S.projects.filter(p=>(p.status||'active')===k)]);
+  return `<div><button class="back" data-go="more">← More</button></div>`+projBanner()+`<div class="top"><div><h1>Projects</h1><div class="sub">${S.projects.length} in total</div></div><button class="btn coral" data-act="pproj-new">+ Project</button></div>`+
+    groups.filter(g=>g[1].length).map(([n,list])=>`<h2 style="font-size:20px">${n}</h2><div class="pcards">${list.map(p=>{const st=pStats(p), hl=pHealth(p,st); return `<button class="card pcard" data-act="pproj-open" data-id="${p.id}" style="border-top:6px solid ${p.color}">
+      <span class="row-between"><b>${esc(p.name)}</b><em class="pill ${hl[1]}">${hl[0]}</em></span><span class="muted" style="font-size:13px">${esc((pClient(p.client)||{}).name||'No client')}${p.due?' · '+pDueText(p.due):''}</span>
+      <span class="prog"><i style="width:${st.pct}%;background:${p.color}"></i></span><span class="row-between muted" style="font-size:13px"><span>${st.done} of ${st.total} tasks</span><span class="num">${st.owed?H(st.owed)+' owed':st.fee?H(st.fee):''}</span></span></button>`}).join('')}</div>`).join('')+
+    (S.projects.length?'':`<div class="card"><p>Add your first project: a client job, a launch, anything with tasks and a deadline.</p></div>`);
+}
+function viewClients(){
+  return `<div><button class="back" data-go="more">← More</button></div>`+projBanner()+`<div class="top"><div><h1>Clients</h1><div class="sub">${S.clients.length} client${S.clients.length===1?'':'s'}</div></div><button class="btn coral" data-act="pclient-new">+ Client</button></div>
+    <div class="pcards">${S.clients.map(c=>{const ps=S.projects.filter(p=>p.client===c.id), inv=S.invoices.filter(i=>i.client===c.id), paid=inv.filter(i=>i.paid).reduce((a,i)=>a+(+i.amount||0),0), owed=inv.filter(i=>!i.paid).reduce((a,i)=>a+(+i.amount||0),0);
+      return `<button class="card pcard" data-act="pclient-edit" data-id="${c.id}"><b>${esc(c.name)}</b><span class="muted" style="font-size:13px">${ps.length} project${ps.length===1?'':'s'}${c.email?' · '+esc(c.email):''}</span>
+        <span class="row-between" style="font-size:14px"><span>Paid <b class="num">${H(paid)}</b></span><span>Owed <b class="num" style="color:${owed?'var(--coral)':'inherit'}">${H(owed)}</b></span></span></button>`}).join('')}</div>`+
+    (S.clients.length?'':`<div class="card"><p>Add the people and companies you work for. Their projects and invoices collect here.</p></div>`);
+}
+function viewMoneyP(){
+  const T=todayISO(), ym=T.slice(0,7), y=T.slice(0,4), owed=pOwedList(), late=owed.filter(i=>i.due&&i.due<T), soon=owed.filter(i=>!(i.due&&i.due<T));
+  const paid=S.invoices.filter(i=>i.paid).sort((a,b)=>(b.paidAt||'').localeCompare(a.paidAt||'')), sum=a=>a.reduce((t,i)=>t+(+i.amount||0),0);
+  let out=projBanner()+`<div class="top"><div><h1>Money</h1><div class="sub">What clients owe you and what came in</div></div><button class="btn coral" data-act="pinv-new">+ Invoice</button></div>
+    <div class="dtiles">${pTile(H(sum(owed)),'Owed to you','var(--coral)')}${pTile(H(sum(late)),'Overdue',late.length?'var(--bad)':'')}${pTile(H(sum(paid.filter(i=>(i.paidAt||'').slice(0,7)===ym))),'Paid this month','var(--good)')}${pTile(H(sum(paid.filter(i=>(i.paidAt||'').slice(0,4)===y))),'Paid this year')}</div>`;
+  if(late.length) out+=`<div class="card"><span class="label lateword">Overdue · ${late.length}</span><div class="list">${late.map(pInvRow).join('')}</div></div>`;
+  out+=`<div class="card"><span class="label">Waiting to be paid · ${soon.length}</span>${soon.length?`<div class="list">${soon.map(pInvRow).join('')}</div>`:'<p class="muted" style="font-size:14px">Nothing waiting.</p>'}</div>`;
+  const left=S.projects.filter(p=>p.status!=='done').map(p=>[p,pStats(p)]).filter(([,st])=>st.fee>st.billed);
+  if(left.length) out+=`<div class="card tint"><b>Still to invoice</b><div class="list">${left.map(([p,st])=>`<div class="li"><span class="grow"><b><i class="pdot" style="background:${p.color}"></i>${esc(p.name)}</b><span>${H(st.billed)} invoiced of ${H(st.fee)}</span></span><span class="amt num">${H(st.fee-st.billed)}</span><button class="btn small ghost" data-act="pinv-new" data-proj="${p.id}">Invoice</button></div>`).join('')}</div></div>`;
+  out+=`<div class="card"><span class="label">Paid</span>${paid.length?`<div class="list">${paid.slice(0,V.showAll?99:8).map(pInvRow).join('')}</div>${paid.length>8?`<button class="linkbtn" data-act="see-all">${V.showAll?'Show fewer':'Show all '+paid.length}</button>`:''}`:'<p class="muted" style="font-size:14px">Paid invoices show here.</p>'}</div>`;
+  out+=`<div class="card"><span class="label">Paid by month</span>${pEarnChart()}</div>`;
+  return out;
+}
+function viewTimelineP(){
+  const T=todayISO(), ym=V.tlm||T.slice(0,7), [y,mo]=ym.split('-').map(Number), s=`${ym}-01`, e=isoOf(new Date(y,mo+2,0,12)), days=diffDays(s,e)+1;
+  const pos=d=>Math.max(0,Math.min(100,diffDays(s,d)/days*100));
+  const list=S.projects.filter(p=>{const a=p.start||p.due, b=p.due||p.start; return a&&b&&b>=s&&a<=e}).sort((a,b)=>(a.start||a.due).localeCompare(b.start||b.due));
+  const tabs=MON.map((m,i)=>{const k=`${y}-${pad(i+1)}`; return `<button class="stab ${k===ym?'on':''}" data-act="ptl" data-m="${k}" style="--c:${STAMPCOL[i]}" aria-pressed="${k===ym}"><span>${esc(m)}</span></button>`}).join('');
+  const months=[0,1,2].map(i=>{const d=new Date(y,mo-1+i,1,12), iso=isoOf(d), n=new Date(y,mo+i,0).getDate(); return `<span style="left:${pos(iso)}%;width:${n/days*100}%">${MONTHF[d.getMonth()]}</span>`}).join('');
+  const rows=list.map(p=>{const a=p.start||p.due, b=p.due||addDays(p.start,14), st=pStats(p), ts=pTasksOf(p.id).filter(t=>t.due&&t.due>=s&&t.due<=e&&pOpen(t));
+    return `<div class="tlrow"><button class="tln" data-act="pproj-open" data-id="${p.id}"><i class="pdot" style="background:${p.color}"></i>${esc(p.name)}</button><div class="tlt">
+      ${T>=s&&T<=e?`<b class="tlnow" style="left:${pos(T)}%"></b>`:''}<div class="tlbar ${p.status==='done'?'done':''}" style="left:${pos(a)}%;width:${Math.max(1.5,pos(b)-pos(a))}%;background:${p.color}"><i style="width:${st.pct}%"></i>${pos(b)-pos(a)>=9?`<span>${st.pct}%</span>`:''}</div>
+      ${ts.map(t=>`<button class="tldot" data-act="ptask-edit" data-id="${t.id}" style="left:${pos(t.due)}%;border-color:${p.color}" title="${esc(t.title)} · ${fmtShort(t.due)}"></button>`).join('')}</div></div>`}).join('');
+  return `<div><button class="back" data-go="more">← More</button></div>`+projBanner()+`<div class="top"><div><h1>Timeline</h1><div class="sub">${MONTHF[mo-1]} to ${MONTHF[(mo+1)%12]} · every project</div></div><div class="row-end"><button class="btn ghost small" data-act="ptl" data-m="${mo===1?`${y-1}-12`:`${y}-${pad(mo-1)}`}" aria-label="Earlier">‹</button><button class="btn ghost small" data-act="ptl" data-m="${T.slice(0,7)}">Now</button><button class="btn ghost small" data-act="ptl" data-m="${mo===12?`${y+1}-01`:`${y}-${pad(mo+1)}`}" aria-label="Later">›</button></div></div>
+    <div class="stabs-top" role="group" aria-label="Months">${tabs}</div>
+    <div class="card tlwrap"><div class="tlrow tlhead"><span class="tln"></span><div class="tlt tlmonths">${months}${T>=s&&T<=e?`<b class="tltoday" style="left:${pos(T)}%">today</b>`:''}</div></div>
+      ${rows||'<p class="muted">No projects in these months. Give your projects a start and due date to see them here.</p>'}
+</div>
+    <div class="legend"><span><i style="background:var(--muted)"></i>Bar: start to due date, filled part is done</span><span><i class="ring"></i>Task due</span></div>`;
+}
+function viewMatrixP(){
+  const open=S.tasks.filter(pOpen), unsorted=open.filter(t=>!t.prio);
+  return `<div><button class="back" data-go="more">← More</button></div>`+projBanner()+`<div class="top"><div><h1>What matters?</h1><div class="sub">Drag tasks between the boxes, or tap a box letter</div></div></div>
+    ${unsorted.length?`<div class="card"><span class="label">Sort these · ${unsorted.length}</span><div class="list">${unsorted.slice(0,8).map(t=>`<div class="li"><span class="grow tdtext" draggable="true" data-task="${t.id}"><b>${esc(t.title)}</b><span>${esc(pName(t.project))}</span></span><span class="qbtns">${QUADS.map(([k,n])=>`<button class="q-${k}" data-act="pquad" data-id="${t.id}" data-k="${k}" title="${n}">${n.split(' ')[0]}</button>`).join('')}</span></div>`).join('')}</div></div>`:''}
+    <div class="mx">${QUADS.map(([k,n])=>`<div class="mq q-${k}" data-quad="${k}"><h4>${n}<small>${{do:'urgent and important',plan:'important, not urgent',hand:'urgent, not for you',drop:'neither'}[k]}</small></h4>
+      ${open.filter(t=>t.prio===k).map(t=>`<div class="mt" draggable="true" data-task="${t.id}"><button data-act="ptask-edit" data-id="${t.id}"><b>${esc(t.title)}</b><span>${esc(pName(t.project))}${t.due?' · '+fmtShort(t.due):''}</span></button></div>`).join('')||'<p class="muted" style="font-size:13px">Drop tasks here</p>'}</div>`).join('')}</div>`;
+}
+function viewPCal(){
+  const T=todayISO(), ym=V.month||T.slice(0,7), [y,mo]=ym.split('-').map(Number), dim=new Date(y,mo,0).getDate(), first=(new Date(y,mo-1,1).getDay()+6)%7;
+  const s=`${ym}-01`, e=`${ym}-${pad(dim)}`, sel=V.day&&V.day.slice(0,7)===ym?V.day:(ym===T.slice(0,7)?T:s);
+  const ev={}; const add=(d,x)=>{(ev[d]=ev[d]||[]).push(x)};
+  S.tasks.filter(t=>t.due&&t.due>=s&&t.due<=e).forEach(t=>add(t.due,{k:t.col==='done'?'paid':'task',t:t.title,id:t.id,a:'ptask-edit'}));
+  S.projects.filter(p=>p.due&&p.due>=s&&p.due<=e).forEach(p=>add(p.due,{k:'pdue',t:'⚑ '+p.name,id:p.id,a:'pproj-open'}));
+  S.invoices.filter(i=>i.due&&i.due>=s&&i.due<=e).forEach(i=>add(i.due,{k:i.paid?'paid':'in',t:'$ '+i.label,id:i.id,a:'pinv-edit'}));
+  const tabs=MON.map((m,i)=>{const k=`${y}-${pad(i+1)}`; return `<button class="stab ${k===ym?'on':''}" data-act="m-pick" data-m="${k}" style="--c:${STAMPCOL[i]}" aria-pressed="${k===ym}"><span>${esc(m)}</span></button>`}).join('');
+  let cells=''; for(let i=0;i<first;i++) cells+='<div class="bd x"></div>';
+  for(let d=1;d<=dim;d++){const iso=`${ym}-${pad(d)}`, l=ev[iso]||[];
+    cells+=`<button class="bd ${iso===T?'today':''} ${iso<T?'past':''} ${iso===sel?'sel':''}" data-act="sel-day" data-d="${iso}"><span class="dn">${d}</span>${l.slice(0,2).map(x=>`<span class="bt ${x.k}">${esc(x.t)}</span>`).join('')}${l.length>2?`<span class="bt more">+${l.length-2}</span>`:''}<span class="bdots">${l.map(x=>`<i class="${x.k}"></i>`).join('')}</span></button>`}
+  const dl=ev[sel]||[];
+  return `<div><button class="back" data-go="more">← More</button></div>`+projBanner()+`<div class="monthwrap"><div class="monthmain"><div class="top"><div><span class="eyebrow">CALENDAR</span><h1>${MONTHF[mo-1]} ${y}</h1></div><div class="row-end"><button class="btn ghost small" data-act="m-pick" data-m="${mo===1?`${y-1}-12`:`${y}-${pad(mo-1)}`}" aria-label="Previous month">‹</button><button class="btn ghost small" data-act="m-pick" data-m="${mo===12?`${y+1}-01`:`${y}-${pad(mo+1)}`}" aria-label="Next month">›</button></div></div>
+    <div class="stabs-top">${tabs}</div>
+    <div class="bcal"><div class="bh">Mon</div><div class="bh">Tue</div><div class="bh">Wed</div><div class="bh">Thu</div><div class="bh">Fri</div><div class="bh">Sat</div><div class="bh">Sun</div>${cells}</div>
+    <div class="legend"><span><i class="bill"></i>Task due</span><span><i class="pdue"></i>Project due</span><span><i class="in"></i>Invoice due</span><span><i class="paid"></i>Done or paid</span></div>
+    <div class="card dayc"><div class="card-head"><b>${fmtShort(sel)}${sel===T?' · Today':''}</b><button class="btn small coral" data-act="ptask-new" data-col="todo" data-date="${sel}">+ Task</button></div>
+      ${dl.length?`<div class="list">${dl.map(x=>`<button class="li" data-act="${x.a}" data-id="${x.id}"><span class="grow"><b>${esc(x.t)}</b><span>${{task:'Task',paid:'Done',pdue:'Project due',in:'Invoice due'}[x.k]}</span></span></button>`).join('')}</div>`:'<p class="muted" style="font-size:14px">Nothing on this day.</p>'}</div>
+    </div><div class="stabs-side">${tabs}</div></div>`;
+}
+function viewMoreP(){
+  const items=[['timeline','Timeline','Every project on one strip'],['matrix','Priority matrix','Do now, plan, hand off, let go'],['pcal','Calendar','Tasks, deadlines and invoices by day'],['projects','Projects','Active, paused and done'],['clients','Clients','Who you work for and what they owe'],['settings','Settings','Name, currency, look and backups']];
+  return projBanner()+`<div class="top"><div><h1>More</h1></div></div><div class="morelist">${items.map(([k,n,d])=>`<button class="morecard" data-go="${k}"><span class="mi" aria-hidden="true">${icon(MOREICON[k]||'dots')}</span><span class="grow"><b>${n}</b><span>${d}</span></span><span class="muted" aria-hidden="true">›</span></button>`).join('')}</div>`;
+}
+
+/* ---------- forms ---------- */
+const pOpts=(list,sel,none)=>(none?`<option value="">${none}</option>`:'')+list.map(([k,n])=>`<option value="${esc(k)}" ${k===sel?'selected':''}>${esc(n)}</option>`).join('');
+function pTaskForm(t,o){
+  const isNew=!t; o=o||{}; t=t||{title:'',project:o.proj||V.pFilter&&V.pFilter!=='none'&&V.pFilter||'',col:o.col||'todo',due:o.date||'',prio:'',notes:'',log:[]};
+  openDlg(`<div class="dlg-head"><h2>${isNew?'New task':'Edit task'}</h2><button class="iconbtn" data-act="close" aria-label="Close">×</button></div>
+  <form class="form" data-form="ptask" data-id="${isNew?'':t.id}" novalidate>
+    <div class="field"><label for="pt-title">Task</label><input type="text" id="pt-title" name="title" value="${esc(t.title)}" placeholder="Send homepage draft"></div>
+    <div class="fgrid"><div class="field"><label for="pt-proj">Project</label><select id="pt-proj" name="project">${pOpts(S.projects.filter(p=>p.status!=='done'||p.id===t.project).map(p=>[p.id,p.name]),t.project,'No project')}</select></div>
+    <div class="field"><label for="pt-col">Column</label><select id="pt-col" name="col">${pOpts(PCOLS,t.col)}</select></div>
+    <div class="field"><label for="pt-due">Due</label><input type="date" id="pt-due" name="due" value="${esc(t.due||'')}"></div>
+    <div class="field"><label for="pt-prio">Priority box</label><select id="pt-prio" name="prio">${pOpts(QUADS,t.prio,'Not sorted')}</select></div>
+    <div class="field"><label for="pt-mins">Time logged (minutes)</label><input type="number" id="pt-mins" name="mins" min="0" step="1" inputmode="numeric" value="${pMins(t)||''}" placeholder="0"></div></div>
+    <div class="field"><label for="pt-notes">Notes</label><textarea id="pt-notes" name="notes" placeholder="Optional">${esc(t.notes||'')}</textarea></div>
+    <p class="err" data-err hidden></p>
+    <div class="row-between">${isNew?'<span></span>':`<button type="button" class="btn ${V.confirm==='ptask'?'danger':'ghost'}" data-act="ptask-del" data-id="${t.id}">${V.confirm==='ptask'?'Tap again to delete':'Delete'}</button>`}<div class="row-end"><button type="button" class="btn ghost" data-act="close">Cancel</button><button class="btn coral" type="submit">${isNew?'Add task':'Save'}</button></div></div></form>`);
+}
+function pProjForm(p){
+  const isNew=!p; p=p||{name:'',client:'',color:PROJCOL[S.projects.length%PROJCOL.length],start:todayISO(),due:'',fee:'',status:'active'};
+  openDlg(`<div class="dlg-head"><h2>${isNew?'New project':'Edit project'}</h2><button class="iconbtn" data-act="close" aria-label="Close">×</button></div>
+  <form class="form" data-form="pproj" data-id="${isNew?'':p.id}" novalidate>
+    <div class="field"><label for="pp-name">Project name</label><input type="text" id="pp-name" name="name" value="${esc(p.name)}" placeholder="Website for Bloom Bakery"></div>
+    <div class="fgrid"><div class="field"><label for="pp-client">Client</label><select id="pp-client" name="client">${pOpts(S.clients.map(c=>[c.id,c.name]),p.client,'No client')}<option value="__new">+ New client…</option></select></div>
+    <div class="field"><label for="pp-newc">New client name</label><input type="text" id="pp-newc" name="newClient" placeholder="Only if you picked New client"></div>
+    <div class="field"><label for="pp-start">Start</label><input type="date" id="pp-start" name="start" value="${esc(p.start||'')}"></div>
+    <div class="field"><label for="pp-due">Due</label><input type="date" id="pp-due" name="due" value="${esc(p.due||'')}"></div>
+    <div class="field"><label for="pp-fee">Project fee (${esc(S.settings.home)})</label><input type="number" id="pp-fee" name="fee" min="0" step="any" inputmode="decimal" value="${esc(p.fee)}" placeholder="Optional"></div>
+    <div class="field"><label for="pp-status">Status</label><select id="pp-status" name="status">${pOpts(PSTATUS,p.status||'active')}</select></div></div>
+    <fieldset><legend class="label">Colour</legend><div class="swatches">${PROJCOL.map(c=>`<label><input type="radio" name="color" value="${c}" ${c===p.color?'checked':''}><i style="background:${c}"></i></label>`).join('')}</div></fieldset>
+    <p class="err" data-err hidden></p>
+    <div class="row-between">${isNew?'<span></span>':`<button type="button" class="btn ${V.confirm==='pproj'?'danger':'ghost'}" data-act="pproj-del" data-id="${p.id}">${V.confirm==='pproj'?'Tap again: delete project and its tasks':'Delete'}</button>`}<div class="row-end"><button type="button" class="btn ghost" data-act="close">Cancel</button><button class="btn coral" type="submit">${isNew?'Add project':'Save'}</button></div></div></form>`);
+}
+function pClientForm(c){
+  const isNew=!c; c=c||{name:'',email:'',notes:''};
+  openDlg(`<div class="dlg-head"><h2>${isNew?'New client':'Edit client'}</h2><button class="iconbtn" data-act="close" aria-label="Close">×</button></div>
+  <form class="form" data-form="pclient" data-id="${isNew?'':c.id}" novalidate>
+    <div class="field"><label for="pc-name">Name</label><input type="text" id="pc-name" name="name" value="${esc(c.name)}" placeholder="Bloom Bakery"></div>
+    <div class="field"><label for="pc-email">Email</label><input type="email" id="pc-email" name="email" value="${esc(c.email||'')}" placeholder="Optional"></div>
+    <div class="field"><label for="pc-notes">Notes</label><textarea id="pc-notes" name="notes" placeholder="Rates, how they like to be contacted…">${esc(c.notes||'')}</textarea></div>
+    <p class="err" data-err hidden></p>
+    <div class="row-between">${isNew?'<span></span>':`<button type="button" class="btn ${V.confirm==='pclient'?'danger':'ghost'}" data-act="pclient-del" data-id="${c.id}">${V.confirm==='pclient'?'Tap again to delete':'Delete'}</button>`}<div class="row-end"><button type="button" class="btn ghost" data-act="close">Cancel</button><button class="btn coral" type="submit">${isNew?'Add client':'Save'}</button></div></div></form>`);
+}
+function pInvForm(i,pid){
+  const isNew=!i, p=pProj(pid); i=i||{label:`Invoice #${String(S.invoices.length+1).padStart(3,'0')}`,project:pid||'',client:p?p.client:'',amount:p?Math.max(0,pStats(p).fee-pStats(p).billed)||'':'',due:addDays(todayISO(),14),paid:false};
+  openDlg(`<div class="dlg-head"><h2>${isNew?'New invoice':'Edit invoice'}</h2><button class="iconbtn" data-act="close" aria-label="Close">×</button></div>
+  <form class="form" data-form="pinv" data-id="${isNew?'':i.id}" novalidate>
+    <p class="muted" style="font-size:13px">Track an invoice you sent. Stampbook keeps the list, it does not send invoices.</p>
+    <div class="fgrid"><div class="field"><label for="pi-label">Name</label><input type="text" id="pi-label" name="label" value="${esc(i.label)}"></div>
+    <div class="field"><label for="pi-amt">Amount (${esc(S.settings.home)})</label><input type="number" id="pi-amt" name="amount" min="0" step="any" inputmode="decimal" value="${esc(i.amount)}"></div>
+    <div class="field"><label for="pi-proj">Project</label><select id="pi-proj" name="project">${pOpts(S.projects.map(p=>[p.id,p.name]),i.project,'No project')}</select></div>
+    <div class="field"><label for="pi-client">Client</label><select id="pi-client" name="client">${pOpts(S.clients.map(c=>[c.id,c.name]),i.client,'Same as the project')}</select></div>
+    <div class="field"><label for="pi-due">Due</label><input type="date" id="pi-due" name="due" value="${esc(i.due||'')}"></div>
+    <div class="field"><label for="pi-paid">Paid on</label><input type="date" id="pi-paid" name="paidAt" value="${esc(i.paid?i.paidAt||'':'')}"><span class="hint">Leave empty while it is unpaid</span></div></div>
+    <p class="err" data-err hidden></p>
+    <div class="row-between">${isNew?'<span></span>':`<button type="button" class="btn ${V.confirm==='pinv'?'danger':'ghost'}" data-act="pinv-del" data-id="${i.id}">${V.confirm==='pinv'?'Tap again to delete':'Delete'}</button>`}<div class="row-end"><button type="button" class="btn ghost" data-act="close">Cancel</button><button class="btn coral" type="submit">${isNew?'Add invoice':'Save'}</button></div></div></form>`);
+}
+function pRecForm(r,pid){
+  const isNew=!r; r=r||{title:'',project:pid||'',every:'month',start:addDays(todayISO(),1)};
+  openDlg(`<div class="dlg-head"><h2>${isNew?'Repeating task':'Edit repeating task'}</h2><button class="iconbtn" data-act="close" aria-label="Close">×</button></div>
+  <form class="form" data-form="prec" data-id="${isNew?'':r.id}" novalidate>
+    <div class="field"><label for="pr-title">Task</label><input type="text" id="pr-title" name="title" value="${esc(r.title)}" placeholder="Send monthly report"></div>
+    <div class="fgrid"><div class="field"><label for="pr-proj">Project</label><select id="pr-proj" name="project">${pOpts(S.projects.map(p=>[p.id,p.name]),r.project,'No project')}</select></div>
+    <div class="field"><label for="pr-every">How often</label><select id="pr-every" name="every">${pOpts(PREPEAT,r.every)}</select></div>
+    <div class="field"><label for="pr-start">First one due</label><input type="date" id="pr-start" name="start" value="${esc(r.start)}"></div></div>
+    <p class="muted" style="font-size:13px">The next task appears on your board a week before it is due.</p>
+    <p class="err" data-err hidden></p>
+    <div class="row-between">${isNew?'<span></span>':`<button type="button" class="btn ${V.confirm==='prec'?'danger':'ghost'}" data-act="prec-del" data-id="${r.id}">${V.confirm==='prec'?'Tap again to stop it':'Stop repeating'}</button>`}<div class="row-end"><button type="button" class="btn ghost" data-act="close">Cancel</button><button class="btn coral" type="submit">Save</button></div></div></form>`);
+}
+function pSetupForm(step,d){
+  const g=guessHome(); d=d||{home:g.cur,country:g.country,name:'',project:'',client:'',due:''}; V.setupP=d;
+  const head=`<div class="dlg-head"><h2>Set up Stampbook Projects</h2><button class="iconbtn" data-act="close" aria-label="Close">×</button></div><div class="stepdots"><span class="on">You</span><span class="${step?'on':''}">First project</span></div>`;
+  const body=step===0?`<div class="field"><label for="su-name">Your name</label><input type="text" id="su-name" name="name" value="${esc(d.name)}" placeholder="Optional"></div>
+    <div class="field"><label for="su-country">Where do you live?</label><input type="text" id="su-country" name="country" list="countrylist" value="${esc(d.country||'')}" autocomplete="off"></div>
+    <div class="field"><label for="su-home">Your currency</label><select id="su-home" name="home">${CURS.map(c=>`<option ${c===d.home?'selected':''}>${c}</option>`).join('')}</select><span class="hint" id="su-country-hint">Used for fees and invoices.</span></div>`
+   :`<div class="field"><label for="su-proj">Your first project</label><input type="text" id="su-proj" name="project" value="${esc(d.project)}" placeholder="Website for Bloom Bakery"><span class="hint">You can skip this</span></div>
+    <div class="fgrid"><div class="field"><label for="su-client">Client</label><input type="text" id="su-client" name="client" value="${esc(d.client)}" placeholder="Optional"></div>
+    <div class="field"><label for="su-due">Due</label><input type="date" id="su-due" name="due" value="${esc(d.due)}"></div></div>`;
+  openDlg(head+`<form class="form" data-form="psetup" data-step="${step}" novalidate>${body}<p class="err" data-err hidden></p>
+    <div class="row-between">${step?`<button type="button" class="btn ghost" data-act="psetup-back">Back</button>`:'<span></span>'}<button class="btn coral" type="submit">${step?'Finish':'Next'}</button></div></form>`);
+}
+
+/* ---------- actions ---------- */
+function pMove(t,col){
+  const T=todayISO(); if(t.col===col) return;
+  if(col==='waiting'){t.waitingSince=T; t.nudge=addDays(T,3)}
+  if(col==='done') t.doneAt=T; else delete t.doneAt;
+  if(col==='done'&&S.settings.timer&&S.settings.timer.task===t.id) pStopTimer();
+  t.col=col;
+}
+function projAct(act,b,id){
+  const T=todayISO(), before=snapshot(), tk=()=>S.tasks.find(x=>x.id===id);
+  switch(act){
+    case 'start-own': if(syncOn()) syncStop(true); pSetupForm(0); return true;
+    case 'psetup-back': pSetupForm(0,V.setupP); return true;
+    case 'load-sample': {if(syncOn()) syncStop(true); S=makeSampleP(); V.tab='today'; commit('Example projects loaded',before); return true}
+    case 'ptask-new': if(pDemoFull()){closeDlg(); pDemoDialog(); return true} pTaskForm(null,{col:b.dataset.col,proj:b.dataset.proj,date:b.dataset.date}); return true;
+    case 'ptask-edit': {const t=tk(); if(t) pTaskForm(t); return true}
+    case 'ptask-done': {const t=tk(); if(!t) return true; leaveSample(); pMove(t,'done'); commit(`Done: ${t.title} ✓`,before); return true}
+    case 'ptask-del': if(V.confirm!=='ptask'){V.confirm='ptask'; b.textContent='Tap again to delete'; b.classList.add('danger'); b.classList.remove('ghost')} else {leaveSample(); S.tasks=S.tasks.filter(x=>x.id!==id); V.confirm=null; closeDlg(); commit('Task deleted',before)} return true;
+    case 'pmove': {const t=tk(); if(!t) return true; const i=PCOLS.findIndex(c=>c[0]===t.col)+(+b.dataset.d); if(i<0||i>3) return true; leaveSample(); pMove(t,PCOLS[i][0]); commit(`Moved to ${PCOLS[i][1]}`,before); return true}
+    case 'pdone-all': V.pShowDone=!V.pShowDone; render(); return true;
+    case 'pnow-later': S.taskDone['pnow:'+id]='skip:'+T; save(); render(); toast('Moved to tomorrow'); return true;
+    case 'ptimer-start': {const t=tk(); if(!t) return true; leaveSample(); if(S.settings.timer) pStopTimer(); S.settings.timer={task:id,start:Date.now()}; if(t.col==='todo') t.col='doing'; commit('Timer started. Focus for 25 minutes.'); return true}
+    case 'ptimer-stop': {leaveSample(); const m=pStopTimer(); commit(`${pHrs(m)} logged`,before); return true}
+    case 'pnudge': {const t=tk(); if(!t) return true; leaveSample(); t.nudge=addDays(T,3); commit('Nudged. Reminder again in 3 days.',before); return true}
+    case 'pfilter': V.pFilter=b.dataset.k; render(); return true;
+    case 'pquad': {const t=tk(); if(!t) return true; leaveSample(); t.prio=b.dataset.k; commit(QUADNAME[t.prio],before); return true}
+    case 'pproj-new': pProjForm(null); return true;
+    case 'pproj-edit': pProjForm(pProj(id)); return true;
+    case 'pproj-open': V.tab='project'; V.proj=id; closeDlg(); render(); window.scrollTo(0,0); return true;
+    case 'pproj-del': if(V.confirm!=='pproj'){V.confirm='pproj'; b.textContent='Tap again: delete project and its tasks'; b.classList.add('danger'); b.classList.remove('ghost')} else {leaveSample(); S.projects=S.projects.filter(p=>p.id!==id); S.tasks=S.tasks.filter(t=>t.project!==id); S.recTasks=S.recTasks.filter(r=>r.project!==id); S.invoices.forEach(i=>{if(i.project===id) i.project=''}); V.confirm=null; closeDlg(); V.tab='projects'; commit('Project deleted. Its invoices stay in Money.',before)} return true;
+    case 'pclient-new': pClientForm(null); return true;
+    case 'pclient-edit': pClientForm(pClient(id)); return true;
+    case 'pclient-del': if(V.confirm!=='pclient'){V.confirm='pclient'; b.textContent='Tap again to delete'; b.classList.add('danger'); b.classList.remove('ghost')} else {leaveSample(); S.clients=S.clients.filter(c=>c.id!==id); S.projects.forEach(p=>{if(p.client===id) p.client=''}); S.invoices.forEach(i=>{if(i.client===id) i.client=''}); V.confirm=null; closeDlg(); commit('Client deleted',before)} return true;
+    case 'pinv-new': pInvForm(null,b.dataset.proj||''); return true;
+    case 'pinv-edit': pInvForm(S.invoices.find(i=>i.id===id)); return true;
+    case 'pinv-paid': {const i=S.invoices.find(x=>x.id===id); if(!i) return true; leaveSample(); i.paid=true; i.paidAt=T; commit(`${i.label} paid ✓`,before); return true}
+    case 'pinv-del': if(V.confirm!=='pinv'){V.confirm='pinv'; b.textContent='Tap again to delete'; b.classList.add('danger'); b.classList.remove('ghost')} else {leaveSample(); S.invoices=S.invoices.filter(i=>i.id!==id); V.confirm=null; closeDlg(); commit('Invoice deleted',before)} return true;
+    case 'prec-new': pRecForm(null,b.dataset.proj||''); return true;
+    case 'prec-edit': pRecForm(S.recTasks.find(r=>r.id===id)); return true;
+    case 'prec-del': if(V.confirm!=='prec'){V.confirm='prec'; b.textContent='Tap again to stop it'; b.classList.add('danger'); b.classList.remove('ghost')} else {leaveSample(); S.recTasks=S.recTasks.filter(r=>r.id!==id); V.confirm=null; closeDlg(); commit('Stopped repeating. Tasks already made stay.',before)} return true;
+    case 'ptl': V.tlm=b.dataset.m; render(); return true;
+    case 'm-pick': V.month=b.dataset.m; V.day=null; render(); return true;
+  }
+  return false;
+}
+function pDue(word){
+  const T=todayISO(), w=word.toLowerCase(); if(w==='today') return T; if(w==='tomorrow') return addDays(T,1);
+  const days=['sun','mon','tue','wed','thu','fri','sat'], i=days.indexOf(w.slice(0,3)); if(i<0||!/^(sun|mon|tue|wed|thu|fri|sat)[a-z]*$/.test(w)) return '';
+  const n=(i-parse(T).getDay()+7)%7||7; return addDays(T,n);
+}
+function projSubmit(kind,f,fd,val,fail){
+  const T=todayISO(), before=snapshot(), no=m=>{fail(m); return true};
+  if(kind==='pqa'){
+    let q=val('q'); if(!q) return true;
+    const go={today:'today',dashboard:'dash',dash:'dash',board:'board',money:'money',invoices:'money',timeline:'timeline',matrix:'matrix',calendar:'pcal',projects:'projects',clients:'clients',settings:'settings',more:'more'}[q.toLowerCase()];
+    if(go){V.tab=go; render(); window.scrollTo(0,0); return true}
+    if(pDemoFull()){pDemoDialog(); return true}
+    const t={id:uid(),project:'',title:'',col:'todo',due:'',prio:'',log:[]};
+    if(/^!/.test(q)){t.prio='do'; q=q.slice(1).trim()}
+    q=q.replace(/(^|\s)#(\S+)/,(m,sp,w)=>{const p=S.projects.find(p=>p.status!=='done'&&p.name.toLowerCase().startsWith(w.toLowerCase())); if(p){t.project=p.id; return ''} return m});
+    const last=q.split(/\s+/).pop(), d=pDue(last); if(d&&q.split(/\s+/).length>1){t.due=d; q=q.replace(/\s+\S+$/,'')}
+    t.title=q.trim(); if(!t.title) return true;
+    leaveSample(); S.tasks.push(t); commit(`Added: ${t.title}${t.due?' · '+fmtShort(t.due):''}`,before);
+    const i=document.getElementById('pqa'); if(i) i.focus(); return true;
+  }
+  if(kind==='ptask'){
+    const title=val('title'); if(!title) return no('Say what the task is.');
+    const t0=f.dataset.id&&S.tasks.find(x=>x.id===f.dataset.id);
+    if(!t0&&pDemoFull()){closeDlg(); pDemoDialog(); return true}
+    leaveSample(); const t=t0||{id:uid(),log:[]};
+    Object.assign(t,{title,project:val('project'),due:val('due'),prio:val('prio'),notes:val('notes')});
+    const col=val('col')||'todo'; if(t0) pMove(t,col); else {t.col=''; pMove(t,col)}
+    const mins=parseInt(val('mins'))||0, have=pMins(t); if(mins!==have){t.log=t.log||[]; t.log.push({d:T,m:mins-have})}
+    if(!t0) S.tasks.push(t);
+    closeDlg(); commit(t0?'Task saved':`Added: ${title}`,before); return true;
+  }
+  if(kind==='pproj'){
+    const name=val('name'); if(!name) return no('Give the project a name.');
+    let client=val('client'); if(client==='__new'){const n=val('newClient'); if(!n) return no('Type the new client’s name.'); const c={id:'c'+uid(),name:n,email:'',notes:''}; S.clients.push(c); client=c.id}
+    if(val('start')&&val('due')&&val('due')<val('start')) return no('The due date is before the start.');
+    leaveSample(); const p0=f.dataset.id&&pProj(f.dataset.id), data={name,client,start:val('start'),due:val('due'),fee:parseFloat(val('fee'))||0,status:val('status')||'active',color:val('color')||PROJCOL[0]};
+    if(p0) Object.assign(p0,data); else {const p=Object.assign({id:'p'+uid(),notes:''},data); S.projects.push(p); V.tab='project'; V.proj=p.id}
+    closeDlg(); commit(p0?'Project saved':`${name} added`,before); return true;
+  }
+  if(kind==='pclient'){
+    const name=val('name'); if(!name) return no('Type the client’s name.');
+    leaveSample(); const c0=f.dataset.id&&pClient(f.dataset.id), data={name,email:val('email'),notes:val('notes')};
+    if(c0) Object.assign(c0,data); else S.clients.push(Object.assign({id:'c'+uid()},data));
+    closeDlg(); commit(c0?'Client saved':`${name} added`,before); return true;
+  }
+  if(kind==='pinv'){
+    const label=val('label')||'Invoice', amount=parseFloat(val('amount')); if(!(amount>0)) return no('Type the amount.');
+    leaveSample(); const i0=f.dataset.id&&S.invoices.find(x=>x.id===f.dataset.id), project=val('project'), paidAt=val('paidAt');
+    const data={label,amount,project,client:val('client')||(pProj(project)||{}).client||'',due:val('due'),paid:!!paidAt,paidAt:paidAt||''};
+    if(i0) Object.assign(i0,data); else S.invoices.push(Object.assign({id:'i'+uid()},data));
+    closeDlg(); commit(i0?'Invoice saved':`${label} added`,before); return true;
+  }
+  if(kind==='prec'){
+    const title=val('title'); if(!title) return no('Say what the task is.');
+    const start=val('start')||T; leaveSample(); const r0=f.dataset.id&&S.recTasks.find(x=>x.id===f.dataset.id), data={title,project:val('project'),every:val('every')||'month',start,day:+start.slice(8)};
+    if(r0){const re=r0.start!==data.start||r0.every!==data.every; Object.assign(r0,data); if(re) r0.upto=''} else S.recTasks.push(Object.assign({id:'r'+uid(),upto:''},data));
+    pRecGen(); closeDlg(); commit('Repeating task saved',before); return true;
+  }
+  if(kind==='psetup'){
+    const step=+f.dataset.step, d=V.setupP;
+    if(step===0){d.name=val('name'); d.home=val('home'); d.country=val('country'); pSetupForm(1,d); return true}
+    d.project=val('project'); d.client=val('client'); d.due=val('due');
+    S=blank(); Object.assign(S.settings,{name:d.name,home:d.home,country:d.country||''});
+    if(d.project){let client=''; if(d.client){const c={id:'c'+uid(),name:d.client,email:'',notes:''}; S.clients.push(c); client=c.id}
+      S.projects.push({id:'p'+uid(),name:d.project,client,color:PROJCOL[0],start:T,due:d.due||'',fee:0,status:'active',notes:''})}
+    closeDlg(); V.tab='today'; commit('Your planner is ready',before); return true;
+  }
+  return false;
+}
+function projBoot(){
+  if(pRecGen()) save();
+  const b=document.querySelector('.brand b'); if(b) b.textContent=PRODUCT.brand||PRODUCT.name;
+  setInterval(()=>{const el=document.querySelector('[data-timer]'); if(el) el.textContent=pHrs(pTimerMins())},30000);
+}
+if(PROJ){
+  // drag and drop between board columns and matrix boxes (mouse and trackpad; phones use the ‹ › buttons)
+  let dragId=null;
+  document.addEventListener('dragstart',e=>{const el=e.target.closest&&e.target.closest('[data-task]'); if(!el) return; dragId=el.dataset.task; e.dataTransfer.effectAllowed='move'; try{e.dataTransfer.setData('text/plain',dragId)}catch(err){} el.classList.add('dragging')});
+  document.addEventListener('dragend',e=>{document.querySelectorAll('.dragging,.dropok').forEach(x=>x.classList.remove('dragging','dropok')); dragId=null});
+  document.addEventListener('dragover',e=>{const z=e.target.closest&&e.target.closest('[data-col],[data-quad]'); if(!z||!dragId) return; e.preventDefault(); document.querySelectorAll('.dropok').forEach(x=>x!==z&&x.classList.remove('dropok')); z.classList.add('dropok')});
+  document.addEventListener('drop',e=>{const z=e.target.closest&&e.target.closest('[data-col],[data-quad]'); if(!z||!dragId) return; e.preventDefault(); const t=S.tasks.find(x=>x.id===dragId); if(!t) return; const before=snapshot(); leaveSample();
+    if(z.dataset.col){pMove(t,z.dataset.col); commit(`Moved to ${PCOLNAME[z.dataset.col]}`,before)} else {t.prio=z.dataset.quad; commit(QUADNAME[t.prio],before)}});
+  document.addEventListener('input',e=>{if(e.target.dataset&&e.target.dataset.pnote){const p=pProj(e.target.dataset.pnote); if(p){leaveSample(); p.notes=e.target.value; save()}}});
+}
+
+/* ---------- example: Nina, a freelance designer (dates relative to today, US dollars) ---------- */
+function makeSampleP(){
+  const T=todayISO(), st=blank(); st.sample=true; st.settings.name='Nina'; st.settings.home='USD'; st.settings.country='United States of America'; st.settings.palette=PRODUCT.palette;
+  const C=(id,name,email)=>{st.clients.push({id,name,email,notes:''})};
+  C('cb','Bloom Bakery','hello@bloombakery.example'); C('cw','Wavelength Podcast',''); C('co','Ortega Studio',''); C('ch','Hart & Co','');
+  const P=(o)=>st.projects.push(Object.assign({notes:'',status:'active'},o));
+  P({id:'pb',name:'Bloom Bakery website',client:'cb',color:'#2F5F8A',start:addDays(T,-21),due:addDays(T,12),fee:2400,notes:'Shop opens on the 20th. Owner prefers WhatsApp for quick questions.'});
+  P({id:'pw',name:'Podcast cover art',client:'cw',color:'#A8435E',start:addDays(T,-4),due:addDays(T,18),fee:450});
+  P({id:'pn',name:'Monthly newsletter',client:'co',color:'#3E6B55',start:addDays(T,-70),due:'',fee:900});
+  P({id:'po',name:'Ortega brand refresh',client:'co',color:'#B7862E',start:addDays(T,-80),due:addDays(T,-30),fee:2400,status:'done'});
+  P({id:'ph',name:'Hart & Co landing page',client:'ch',color:'#7A62B8',start:addDays(T,10),due:addDays(T,40),fee:900});
+  const lg=(...a)=>a.map(([dd,m])=>({d:addDays(T,dd),m}));
+  const K=(project,title,col,o={})=>st.tasks.push(Object.assign({id:uid(),project,title,col,due:'',prio:'',log:[],s:1},o));
+  ['Kick-off call','Sitemap','Moodboard','Wireframes','Homepage design, v1','Collect content','Domain and hosting','Font licences','Style guide'].forEach((t,i)=>K('pb',t,'done',{doneAt:addDays(T,-20+i*2),log:lg([-20+i*2,40+i*10])}));
+  K('pb','Write About page copy','todo',{due:T,prio:'do'});
+  K('pb','Pick photo set with client','todo',{due:addDays(T,2),prio:'plan'});
+  K('pb','Set up order form','todo',{due:addDays(T,3)});
+  K('pb','SEO titles for 6 pages','todo',{prio:'plan'});
+  K('pb','Homepage design, v2','doing',{prio:'do',log:lg([-2,75],[-1,60])});
+  K('pb','Menu page layout','doing',{due:addDays(T,2),log:lg([-1,45])});
+  K('pb','Logo files (SVG)','waiting',{waitingSince:addDays(T,-6),nudge:T});
+  K('pb','Approve colours','waiting',{waitingSince:addDays(T,-2),nudge:addDays(T,1)});
+  K('pw','Brief call with the host','done',{doneAt:addDays(T,-4),log:lg([-4,30])});
+  K('pw','Reference board','doing',{log:lg([-3,50],[-2,25])});
+  K('pw','Sketch 3 cover concepts','todo',{due:addDays(T,5),prio:'plan'});
+  K('pw','Episode list from the host','waiting',{waitingSince:addDays(T,-1)});
+  K('pw','Send the deposit invoice reminder','todo',{due:addDays(T,-1),prio:'do'});
+  ['Write and send September issue','Write and send October issue'].forEach((t,i)=>K('pn',t,'done',{doneAt:addDays(T,-38+i*30),log:lg([-38+i*30,120])}));
+  ['Discovery questions','Brand guidelines','Logo variations','Business cards','Social templates','Signage files','Hand-off pack','Final review'].forEach((t,i)=>K('po',t,'done',{doneAt:addDays(T,-78+i*6),log:lg([-78+i*6,90])}));
+  K('ph','Discovery call','todo',{due:addDays(T,10)});
+  K('ph','Collect brand assets','todo',{prio:'hand'});
+  K('','Update my portfolio','todo',{prio:'plan'});
+  K('','Renew design app subscription','todo',{due:addDays(T,6),prio:'hand'});
+  K('','Redo my old logo','todo',{prio:'drop'});
+  st.recTasks=[{id:'rn1',project:'pn',title:'Pick newsletter topic',every:'month',start:addDays(T,-58),day:+addDays(T,-58).slice(8),upto:''},{id:'rn2',project:'pn',title:'Write and send the newsletter',every:'month',start:addDays(T,-52),day:+addDays(T,-52).slice(8),upto:''}];
+  const I=(o)=>st.invoices.push(Object.assign({id:uid(),paid:false,paidAt:''},o));
+  I({label:'Invoice #009 · deposit',project:'po',client:'co',amount:1200,due:addDays(T,-76),paid:true,paidAt:addDays(T,-74)});
+  I({label:'Invoice #011 · final',project:'po',client:'co',amount:1200,due:addDays(T,-28),paid:true,paidAt:addDays(T,-27)});
+  I({label:'Invoice #012 · deposit',project:'pb',client:'cb',amount:1200,due:addDays(T,-19),paid:true,paidAt:addDays(T,-18)});
+  I({label:'Invoice #014 · final',project:'pb',client:'cb',amount:1200,due:addDays(T,4)});
+  I({label:'Cover art deposit',project:'pw',client:'cw',amount:150,due:addDays(T,-3)});
+  I({label:'Newsletter · September',project:'pn',client:'co',amount:300,due:addDays(T,-40),paid:true,paidAt:addDays(T,-39)});
+  I({label:'Newsletter · October',project:'pn',client:'co',amount:300,due:addDays(T,-10),paid:true,paidAt:addDays(T,-9)});
+  I({label:'Newsletter · November',project:'pn',client:'co',amount:300,due:addDays(T,20)});
+  // the repeating newsletter jobs fill in up to a week ahead, like they would for a real user
+  const keep=S; S=st; pRecGen(); S.tasks.forEach(t=>{t.s=1; if(t.rec&&t.due<T){t.col='done'; t.doneAt=t.due}}); S=keep;
+  return st;
+}
+
 /* ---------- boot ---------- */
 // installed copy (own https site, not embedded): Home Screen icon + offline cache
 if(!PRODUCT.demo&&window.top===window&&location.protocol==='https:'){
@@ -4560,8 +5182,9 @@ if(postRecurring()) save();
 {const fab=document.querySelector('.fab'); if(fab) fab.innerHTML=icon('plus'); const bm=document.querySelector('.brand-mark'); if(bm) bm.innerHTML='<img src="'+APP_ICON+'" alt="">';
  if(!document.querySelector('link[rel=icon]')){const l=document.createElement('link'); l.rel='icon'; l.href=APP_ICON; document.head.appendChild(l)}}
 const hashTab=(location.hash||'').slice(1);
-if((BUDGET?['today','month','bills','goals','more','spending','income','debt','milestones','dump','settings']:['today','month','trips','map','year','settings']).includes(hashTab)) V.tab=hashTab;
+if((PROJ?['today','dash','board','money','more','timeline','matrix','pcal','projects','clients','settings']:BUDGET?['today','month','bills','goals','more','spending','income','debt','milestones','dump','settings']:['today','month','trips','map','year','settings']).includes(hashTab)) V.tab=hashTab;
 if(BUDGET) budgetBoot();
+if(PROJ) projBoot();
 render(); save();
 syncBoot();
 // tests open the page with ?sbtest to read the app's state
